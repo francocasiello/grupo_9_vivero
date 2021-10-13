@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivero </title>
+    <title>Vivero - Log in </title>
     <link rel="stylesheet" href ="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +12,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 rel="stylesheet" />
 </head>
-<body class = "home">
+<body>
     <header>
         <section class = logo-titulo>
-            <img src = "./images/logo.png" class= "logo">
-            <a class ="link" href = "/home.html"><h1 class = "titulo" >Vivero</h1></a>
-            </section>
+        <img src = "./images/logo.png" class= "logo">
+        <a class ="link" href = "/home.html"><h1 class = "titulo" >Vivero</h1></a>
+        </section>
                
         <nav class= "barra-titulo">  
         <ul>
@@ -45,21 +45,35 @@ rel="stylesheet" />
     </header>
 
     <main>
-    <section class = "bienvenidos">
-    <h2>
-        BIENVENIDOS
-    </h2>
-    <h3>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </h3>
-        <section class = "whatsapp">
-           <a class ="link" href = "#">
-               <img src = "./images/whatsapp.png">
-            </a>
-        </section>
-        <section class = "planta">
-            <img src = "./images/logo.png">
-        </section>
+    <section class = "login">
+         <h2>
+            LOG IN
+        </h2>
+          <h3>
+           Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!
+        </h3>
+    </section>
+    <section class = formulariologin>
+        <div class = formulario>
+                <!-- FORMULARIO -->
+                <!--<form action="/crear-producto" method="POST" class="formulario-registracion">-->
+                <form action="/" method="GET" class="formulario-registracion">
+                <div class = "control-formulario">
+                    <input type="text" name="nombreusuario" placeholder="Nombre de Usuario" class="control" minlength="2" required>
+                    <span class="feedback"></span>
+                </div>
+                <div class = "control-formulario">
+                    <input type="password" name ="password"  placeholder= "Contraseña" class ="control" required>
+                </div>
+                 <div>
+                    <p class= "olvidaste">¿Olvidaste tu contraseña?</p>
+                </div>
+                <button type="submit" class="boton-formulario-enviar">Enviar</button>
+                </form>
+        </div>
+         <div class = imagenformulario>
+a
+        </div>
     </section>
     </main>
 

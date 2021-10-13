@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivero - Log in </title>
+    <link rel="stylesheet" href ="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <section class = logo-titulo>
+        <img src = "./images/logo.png" class= "logo">
+        <a class ="link" href = "/home.html"><h1 class = "titulo" >Vivero</h1></a>
+        </section>
+               
+        <nav class= "barra-titulo">  
+        <ul>
+            <li><a class ="link" href = "porduct.Detail.html">Productos</a></li>
+            <li><a class ="link" href = "register.html">Registrate</a></li>
+            <li><a class ="link" href = "#">Contacto</a></li>
+        </ul>
+        </nav>
+
+        <section class = "barra-busqueda">
+            Buscar
+        </section>
+        
+        <section>
+        <a href="#" class="burger-menu">
+            <i class="fas fa-bars"></i>
+            </a>
+        </section>
+        <section class = "iconos">
+            <a class ="link" href = "productCart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <a class ="link" href = "login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+         </section>
+
+
+    </header>
+
+    <main>
+    <section class = "login">
+         <h2>
+            CREAR CUENTA
+        </h2>
+          <h3>
+           Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!
+        </h3>
+    </section>
+    <section class = formulariologin>
+        <div class = formulario>
+            <form action="/resultadoRegister" method="POST" class="formulario-registracion">
+                <!-- <form action="/" method="GET" class="formulario-registracion">-->
+                    <div class = "control-formulario">
+                        <input type="text" name="nombre" placeholder="Nombre y apellido" class="control" minlength="2" required>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class = "control-formulario">
+                        <input type="text" name="user" placeholder="Nombre de usuari@" class="control" required>
+                    </div>
+                    <div class = "control-formulario">
+                        <label>Fecha de nacimiento:</label>
+                        <input type="date" name="fecha" class="control">
+                    </div>
+                    <div class = "control-formulario">
+                        <input type="text" name="domi" placeholder="Domicilio" class="control" required>
+                    </div>
+                    <div class = "control-formulario"> 
+                        <label>Foto de usuario:</label>
+                        <input type="file" name ="avatar" accept=".jpg, .png" multiple>
+                    </div>
+                    <div class = "control-formulario">
+                        <label>Contraseña:</label>
+                        <input type="password" name ="password" class ="control" required>
+                    </div> 
+                    <div class = "control-formulario">
+                        <label>Repetí tu contraseña:</label>
+                        <input type="password" name ="password" class ="control" required>
+                    </div>
+                    <button type="submit" class="boton-formulario">Crear Cuenta</button>
+                    <button type="reset" class="boton-formulario">Borrar</button>
+                </form>
+        </div>
+         <div class = imagenformulariocuenta>
+a
+        </div>
+    </section>
+    </main>
+
+
+    <footer class = "footer-paginas">
+        <div class = "footer-contenido">
+            <div class = "footer-1"></div>
+              <section class = "footer-1">
+                VIVERO
+              </section>
+            <div class = "footer-1a">
+                 <ul> 
+                     <li> <a href = "#"><i class="fab fa-facebook-f"></i></a></li> 
+                     <li> <a href = "#"><i class="fab fa-twitter"></i></a></li>
+                    <li> <a href = "#"><i class="fab fa-instagram"></i></a></li>
+                </ul> 
+            </div>
+        </div>  
+    </footer>
+  </body>
+</html>

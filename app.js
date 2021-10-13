@@ -14,3 +14,24 @@ app.listen(3000, () => {
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/home.html"));
 })
+
+app.get("/login.html", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/login.html"));
+})
+
+app.get("/productCart.html", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/productCart.html"));
+})
+
+app.get("/register.html", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/register.html"));
+})
+
+app.get("/porduct.Detail.html", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/porduct.Detail.html"));
+})
+
+app.get("/home.html", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/home.html"));
+})
+
