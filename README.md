@@ -1,4 +1,4 @@
-Url del Repositorio : https://github.com/va-rodriguez/grupo_9_Vivero
+Url del Repositorio : https://github.com/francocasiello/grupo_9_vivero
 
 Trello: https://trello.com/b/3wNF8Hue/vivero
 
