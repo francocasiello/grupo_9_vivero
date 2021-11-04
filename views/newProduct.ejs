@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head-->
+    <%- include("./partials/head.ejs", { tituloPagina: "Nuevo producto"}) %>
+<body>
+     <!-- header-->
+     <%- include("./partials/header.ejs") %>
+
+    <main>
+    <section class = "login">
+         <h2>
+            AGREGÁ UN PRODUCTO
+        </h2>
+          <h3>
+           Agregá un nuevo producto para vender. ¡Cuanta más información pongas e imagenes más pronto se venderá!
+        </h3>
+    </section>
+    <section class = formulariologin>
+        <div class = formulario>
+            <form action="/resuladoNuevoProducto" method="POST" class="formulario-registracion">
+                <!-- <form action="/" method="GET" class="formulario-registracion">-->
+                    <div class = "control-formulario">
+                        <input type="text" name="nombreProducto" placeholder="Nombre del Producto" class="control" minlength="2" required>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class = "control-formulario">
+                        <input type="text" name="descripcion" placeholder="Descripción" class="control" required>
+                    </div>
+                    <div class = "control-formulario"> 
+                        <label>Subir imagen:</label>
+                        <input type="file" name ="imagenProducto" accept=".jpg, .png" multiple>
+                    </div>
+                    <div class = "control-formulario">
+                        <input type="number" name="precio" placeholder="Precio" class="control" required>
+                    </div>
+                    <div class = "control-formulario">
+                        <p>Categoría</p>
+                        <div class = "control-tipoplanta">
+                        <label>Interior:
+                        <input type="checkbox" name="categorias" value="interior" id = "interior" ></label>
+                        <label>Exterior:
+                        <input type="checkbox" name="categorias" value="exterior" id = "exterior"></label>
+                        <label>Otro:
+                        <input type="checkbox" name="categorias" value="otro" id = "otro"></label>
+                     </div>
+                     <div class = "control-formulario">
+                        <p>Tamaño</p>
+                        <div class = "control-tipoplanta">
+                        <select>
+                            <option value="22">22cm</option>
+                            <option value="24">24cm</option>
+                            <option value="26">26cm</option>
+                        </select>
+                     </div>
+                     </div>
+                    <button type="submit" class="boton-formulario">Agregar</button>
+                    <button type="reset" class="boton-formulario">Borrar</button>
+                </form>
+        </div>
+         <div class = imagenformularionuevoproducto>
+             </div>
+    </section>
+    </main>
+
+
+       <!-- footer-->
+       <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

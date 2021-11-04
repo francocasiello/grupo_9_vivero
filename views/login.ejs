@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head-->
+    <%- include("./partials/head.ejs", { tituloPagina: "Log in"}) %>
+<body>
+    <!-- header-->
+    <%- include("./partials/header.ejs") %>
+
+    <main>
+    <section class = "login">
+         <h2>
+            LOG IN
+        </h2>
+          <h3>
+           Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!
+        </h3>
+    </section>
+    <section class = formulariologin>
+        <div class = formulario>
+                <!-- FORMULARIO -->
+                <!--<form action="/crear-producto" method="POST" class="formulario-registracion">-->
+                <form action="/" method="GET" class="formulario-registracion">
+                <div class = "control-formulario">
+                    <input type="text" name="nombreusuario" placeholder="Nombre de Usuario" class="control" minlength="2" required>
+                    <span class="feedback"></span>
+                </div>
+                <div class = "control-formulario">
+                    <input type="password" name ="password"  placeholder= "Contraseña" class ="control" required>
+                </div>
+                 <div>
+                    <p class= "olvidaste">¿Olvidaste tu contraseña?</p>
+                </div>
+                <button type="submit" class="boton-formulario-enviar">Enviar</button>
+                </form>
+        </div>
+         <div class = imagenformulario>
+
+        </div>
+    </section>
+    </main>
+
+
+    <!-- footer-->
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

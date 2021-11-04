@@ -90,6 +90,10 @@ header {
         margin: auto;
         }
 
+ .barra-titulo ul {  
+            display: flex;
+        }
+
 ul li {
         list-style:none;
         }
@@ -271,10 +275,23 @@ footer {
         height: 70vh;
         }
 
+
+    .imagenformularionuevoproducto {
+            width: 100%;
+            height: 100%;
+            display: none;
+            background-image: url("../images/nuevoproducto.jpg");
+            background-color: #cccccc;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 70vh;
+            }
+
 .control-formulario{
-    margin-bottom: 15px;
     justify-content: center;
     display: flex;
+    color: black;
 }
 
 .control-formulario label{
@@ -286,6 +303,17 @@ footer {
 .control-formulario{
     margin-bottom: 15px;
     display: block;
+    font-weight:800;
+}
+
+.control-tipoplanta label{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.control-formulario p {
+    margin-bottom: 25px;
 }
 
 label {
@@ -462,6 +490,24 @@ form {
     flex-direction: column;
 }
 
+.productoeditar {
+    box-shadow: 0px 0px 10px rgb(207, 206, 206);
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    transition: all 1s;
+}
+
+.productoeditar:hover {
+    box-shadow: 0px 0px 10px #227150;
+  }
+
+  .productoeditar img {
+    width: 100%;
+  } 
+
 .productocarrito1 {
     box-shadow: 0px 0px 10px rgb(207, 206, 206);
     width: 90%;
@@ -587,6 +633,8 @@ justify-content: space-between;
 
 .barra-titulo ul {  
     display: flex;
+    width: 90%;
+    justify-content: flex-end;
 }
 
 .barra-titulo li {  
@@ -613,7 +661,7 @@ h3 {
 }
 
 .formulario {
-    margin-top: 5%;
+    display: flex;
     width: 100%;
     height: 100%;
 }
@@ -624,7 +672,13 @@ h3 {
 }
 
 .imagenformulariocuenta {
-    width: 100%;
+    width: 50%;
+    display: flex;
+}
+
+
+.imagenformularionuevoproducto {
+    width: 50%;
     display: flex;
 }
 
@@ -725,7 +779,10 @@ header {
 }
     
 .barra-titulo{
-    display: flex; 
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+     
 }
 
 .barra-busqueda {
