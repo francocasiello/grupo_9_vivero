@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head-->
+    <%- include("./partials/head.ejs", { tituloPagina: "Detalle de producto"}) %>
+<body>
+     <!-- header-->
+     <%- include("./partials/header.ejs") %>
+     
+      <main>
+        <section class = seccionproducto>
+            
+            <div class = imagenproducto>
+                <img src = "/images/products/<%= products.image %>" class= "producto1">
+            </div>
+            <div class = datosproducto>
+                <div>
+                    <h2 class = tituloproducto>
+                        <%= products.name %>
+                    </h2>
+                    <h3>
+                       $ <%= products.price %>
+                    </h3>
+                    <h4>
+                        <%= products.description %>
+                    </h4>
+                    <h5>
+                        VER MEDIOS DE PAGO
+                     </h5>
+                     <h5>
+                        CALCULAR COSTOS DE ENVIO
+                     </h5> 
+                </div>
+          
+                <div class = "cantidad-agregar">
+                    <h5>
+                        CANTIDAD  :
+                     </h5>
+                     <div class = cantidad>
+                        <form action="/" method="GET" class="formulario-cantidad">
+                            <div class = "control-formulario">
+                                <input type="text" name="cantidad" placeholder="1" class="control" required>
+                                <span class="feedback"></span>
+                            </div>
+                     </div>
+                     <h6>
+                         AGREGAR
+                     </h6>
+               </div>
+               <div>
+                <h6>
+                    <a href="/products/edit/<%= products.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                </h6>
+               </div>
+               
+            </div>
+           
+        </section>
+       
+    </main>
+
+
+      <!-- footer-->
+      <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

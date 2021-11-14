@@ -17,21 +17,21 @@
     </section>
     <section class = formulariologin>
         <div class = formulario>
-            <form action="/resuladoNuevoProducto" method="POST" class="formulario-registracion">
+            <form action="/products" method="POST" class="formulario-registracion" enctype="multipart/form-data">
                 <!-- <form action="/" method="GET" class="formulario-registracion">-->
                     <div class = "control-formulario">
-                        <input type="text" name="nombreProducto" placeholder="Nombre del Producto" class="control" minlength="2" required>
+                        <input type="text" name="name" placeholder="Nombre del Producto" class="control" minlength="2" required>
                         <span class="feedback"></span>
                     </div>
                     <div class = "control-formulario">
-                        <input type="text" name="descripcion" placeholder="Descripción" class="control" required>
+                        <input type="text" name="description" placeholder="Descripción" class="control" required>
                     </div>
                     <div class = "control-formulario"> 
                         <label>Subir imagen:</label>
-                        <input type="file" name ="imagenProducto" accept=".jpg, .png" multiple>
+                        <input type="file" name ="image" accept=".jpg, .png" multiple>
                     </div>
                     <div class = "control-formulario">
-                        <input type="number" name="precio" placeholder="Precio" class="control" required>
+                        <input type="number" name="price" placeholder="Precio" class="control" required>
                     </div>
                     <div class = "control-formulario">
                         <p>Categoría</p>

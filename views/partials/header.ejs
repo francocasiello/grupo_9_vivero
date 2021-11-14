@@ -1,21 +1,23 @@
 <header>
     <section class = logo-titulo>
-        <img src = "./images/logo.png" class= "logo">
+        <img src = "/images/logo.png" class= "logo">
         <a class ="link" href = "/index"><h1 class = "titulo" >Vivero</h1></a>
         </section>
            
     <nav class= "barra-titulo">  
     <ul>
-        <li><a class ="link" href = "productDetail">Productos</a></li>
-        <li><a class ="link" href = "register">Registrate</a></li>
-        <li><a class ="link" href = "newProduct">Agregar Producto</a></li>
-        <li><a class ="link" href = "editProduct">Editar Producto</a></li>
+        <li><a class ="link" href = "/products">PRODUCTOS</a></li>
+        <li><a class ="link" href = "/register">REGISTRATE</a></li>
+        <li><a class ="link" href = "/products/create">AGREGAR PRODUCTO</a></li>
     </ul>
     </nav>
 
-    <section class = "barra-busqueda">
-        Buscar
-    </section>
+    <div class = "barra-busqueda">
+        <form action="/search" method="GET" class="search-form">
+                <input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="search-form_input">
+                <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+            </form>
+     </div>
     
     <section>
     <a href="#" class="burger-menu">
@@ -23,8 +25,8 @@
         </a>
     </section>
     <section class = "iconos">
-        <a class ="link" href = "productCart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-        <a class ="link" href = "login"><i class="fa fa-user" aria-hidden="true"></i></a>
+        <a class ="link" href = "/productCart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <a class ="link" href = "/login"><i class="fa fa-user" aria-hidden="true"></i></a>
      </section>
 
 

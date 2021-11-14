@@ -9,7 +9,7 @@
     <main>
     <section class = "login">
          <h2>
-            EDITA UN PRODUCTO
+            EDITA EL PRODUCTO:  <i><%= productToEdit.name %>
         </h2>
           <h3>
            Edita tu producto para vender. ¡Cuanta más información pongas e imagenes más pronto se venderá!
@@ -17,34 +17,31 @@
     </section>
     <section class = formulariologin>
         <div class = formulario>
-            <form action="/resuladoEditarProducto" method="POST" class="formulario-registracion">
+            <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <!-- <form action="/" method="GET" class="formulario-registracion">-->
-                    <div class = productoeditar>
-                        <img src = "./images/plantaproducto.jpg" class= "producto1">
-                    </div>
                     <div class = "control-formulario">
-                        <input type="text" name="nombreProducto" placeholder="Nombre del Producto" class="control" minlength="2" required>
+                        <input type="text" name="name" placeholder="Nombre del Producto" minlength="2" value="<%= productToEdit.name %>" class="form-input">
                         <span class="feedback"></span>
                     </div>
                     <div class = "control-formulario">
-                        <input type="text" name="descripcion" placeholder="Descripción" class="control" required>
+                        <input type="textarea" name="description" placeholder="Descripción" value="<%= productToEdit.description %>" class="form-input" >
                     </div>
                     <div class = "control-formulario"> 
                         <label>Subir imagen:</label>
-                        <input type="file" name ="imagenProducto" accept=".jpg, .png" multiple>
+                        <input type="file" name ="image" accept=".jpg, .png" multiple>
                     </div>
                     <div class = "control-formulario">
-                        <input type="number" name="precio" placeholder="Precio" class="control" required>
+                        <input type="number" name="price" placeholder="Precio" class="form-input" value="<%= productToEdit.price %>">
                     </div>
                     <div class = "control-formulario">
                         <p>Categoría</p>
                         <div class = "control-tipoplanta">
                         <label>Interior:
-                        <input type="checkbox" name="categorias" value="interior" id = "interior" ></label>
+                        <input type="checkbox" name="categorias" value="category" id = "interior" ></label>
                         <label>Exterior:
-                        <input type="checkbox" name="categorias" value="exterior" id = "exterior"></label>
+                        <input type="checkbox" name="categorias" value="category" id = "exterior"></label>
                         <label>Otro:
-                        <input type="checkbox" name="categorias" value="otro" id = "otro"></label>
+                        <input type="checkbox" name="categorias" value="category" id = "otro"></label>
                      </div>
                      <div class = "control-formulario">
                         <p>Tamaño</p>
@@ -58,11 +55,16 @@
                      </div>
                     <button type="submit" class="boton-formulario">Modificar</button>
                     <button type="reset" class="boton-formulario">Borrar</button>
-                </form>
+                 </form>
+                 <form action="/products/<%= productToEdit.id %>?_method=DELETE" method="POST" >
+                    <button type="submit" class="formulario">ELIMINAR</button>
+                    </form>
         </div>
-         <div class = imagenformularionuevoproducto>
-             </div>
-    </section>
+             <div class = productoeditar>
+                <img src = "/images/products/<%= productToEdit.image %>" class= "Imagen del <%= productToEdit.name %>">
+            </div>
+        </div>
+       </section>
     </main>
 
 

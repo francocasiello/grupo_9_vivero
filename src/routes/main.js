@@ -8,13 +8,15 @@ const mainController = require("../controllers/mainController");
 
 // Acá definimos las rutas
 router.get('/', mainController.index);
+
+
 router.get("/login", mainController.login);
 router.get("/productCart", mainController.productCart);
 router.get("/index", mainController.index);
-router.get("/productDetail", mainController.productDetail);
+//router.get("/productDetail", mainController.productDetail);
 router.get("/register", mainController.register);
-router.get("/newProduct", mainController.newProduct);
-router.get("/editProduct", mainController.editProduct);
+//router.get("/newProduct", mainController.newProduct);
+//router.get("/editProduct", mainController.editProduct);
 
 
 

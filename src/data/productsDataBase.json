@@ -1,0 +1,16 @@
+[
+ {
+  "id": 1,
+  "name": "Ficus",
+  "description": "El género Ficus contiene alrededor de 900 taxones específicos e infra-específicos aceptados de árboles, arbustos y trepadoras de la familia Moraceae, tribu monogenérica Ficeae, oriundas de la zona intertropical, con algunas de ellas distribuidas por las regiones templadas.",
+  "price": 1200,
+  "image": "ficus.jpg"
+ },
+ {
+  "id": 2,
+  "name": "Santa Rita",
+  "description": "Flor de papel, Santa Rita, o buganvillea menor, es una especie botánica de planta trepadora de la familia de las Nyctaginaceae; y es la más común de las especies para bonsái. Es nativa de Brasil.",
+  "price": 1500,
+  "image": "santarita.jpg"
+ }
+]
