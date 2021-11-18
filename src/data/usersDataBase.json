@@ -1,0 +1,82 @@
+[
+    {
+    "name": "Franco",
+    "lastname": "Casiello",
+    "age": 33,
+    "direction": "Mendoza 1116",
+    "password": "", 
+    "mail": "francocasiello@gmail.com"
+    },
+    {
+    "name": "Luciana",
+    "lastname": "Perez",
+    "age": 34,
+    "direction": "Balcarce 1088",
+    "password": "",
+    "mail": "lulaperez@gmail.com"    
+    },
+    {
+    "name": "Gabriela",
+    "lastname": "Riva",
+    "age": 61,
+    "direction": "Oroño 124",
+    "password": "",
+    "mail": "griva@gmail.com"  
+    },
+    {
+    "name": "Nicolas",
+    "lastname": "Cardigni",
+    "age": 29,
+    "direction": "San Juan 2345",
+    "password": "",
+    "mail": "nico_cardito@yahoo.com"  
+    },
+    {
+    "name": "Alejandro",
+    "lastname": "Pinarello",
+    "age": 30,
+    "direction": "Godoy 500 4C",
+    "password": "",
+    "mail": "alepita@gmail.com"  
+    },
+    {
+    "name": "Florencia",
+    "lastname": "Milano",
+    "age": 37,
+    "direction": "Pueyrredon 212",
+    "password": "",
+    "mail": "f_milano@gmail.com"  
+    },
+    {
+    "name": "Belen",
+    "lastname": "Buzey",
+    "age": 36,
+    "direction": "Italia 2420",
+    "password": "",
+    "mail": "belubuzey@gmail.com"  
+    },
+    {
+    "name": "Lucas",
+    "lastname": "Gotileb",
+    "age": 41,
+    "direction": "Buenos Aires 43 P4",
+    "password": "",
+    "mail": "luquitasgotlieb@gmail.com"  
+    },
+    {
+    "name": "Rafael",
+    "lastname": "Menossi",
+    "age": 40,
+    "direction": "Viamonte 2432 2E",
+    "password": "",
+    "mail": "rmenossi_facha@gmail.com"  
+    },
+    {
+    "name": "Bruno",
+    "lastname": "Fantin",
+    "age": 38,
+    "direction": "Cordoba 748 9 D",
+    "password": "",
+    "mail": "bfantin_nob@gmail.com"  
+    }
+    ]

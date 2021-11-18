@@ -10,10 +10,9 @@
         <section class = seccionproducto>
             
             <div class = imagenproducto>
-                <img src = "/images/products/<%= products.image %>" class= "producto1">
+                <img src = "/images/products/<%= products.image %>" class= "Imagen de <%= products.name %>">
             </div>
             <div class = datosproducto>
-                <div>
                     <h2 class = tituloproducto>
                         <%= products.name %>
                     </h2>
@@ -23,38 +22,41 @@
                     <h4>
                         <%= products.description %>
                     </h4>
-                    <h5>
+                    <h5 class = "mediosdepagotext">
                         VER MEDIOS DE PAGO
                      </h5>
+                     <div class = "mediosdepago"> 
+                        <img src = "/images/mediosdepago.jpg" class= "Medios de pago">
+                    </div>   
                      <h5>
-                        CALCULAR COSTOS DE ENVIO
-                     </h5> 
-                </div>
-          
-                <div class = "cantidad-agregar">
-                    <h5>
-                        CANTIDAD  :
+                       <a class ="link" href = "https://www6.oca.com.ar/plataformaenvios/" target="_blank"> CALCULAR COSTOS DE ENVIO</a>
                      </h5>
-                     <div class = cantidad>
+                    
+                    <div class = cantidad>
+                        <div>
+                       <h5>
+                           CANTIDAD:
+                        </h5>
+                       </div>
+                       <div>
                         <form action="/" method="GET" class="formulario-cantidad">
-                            <div class = "control-formulario">
-                                <input type="text" name="cantidad" placeholder="1" class="control" required>
-                                <span class="feedback"></span>
-                            </div>
-                     </div>
-                     <h6>
-                         AGREGAR
-                     </h6>
-               </div>
-               <div>
-                <h6>
-                    <a href="/products/edit/<%= products.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-                </h6>
-               </div>
-               
+                           <div class = "control-formulario">
+                               <input type="text" name="cantidad" placeholder="1" class="control" required>
+                               <span class="feedback"></span> </div>
+                           </form>
+                       </div>
+                       <div  class = cantidad1>
+                       <h6>
+                       AGREGAR AL CARRITO
+                       </h6> 
+                       <h6 class = "linkedita">
+                        <a href="/products/edit/<%= products.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                      </h6>
+                    </div>       
             </div>
            
         </section>
+
        
     </main>
 

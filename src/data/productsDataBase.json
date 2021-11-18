@@ -4,13 +4,141 @@
   "name": "Ficus",
   "description": "El género Ficus contiene alrededor de 900 taxones específicos e infra-específicos aceptados de árboles, arbustos y trepadoras de la familia Moraceae, tribu monogenérica Ficeae, oriundas de la zona intertropical, con algunas de ellas distribuidas por las regiones templadas.",
   "price": 1200,
-  "image": "ficus.jpg"
+  "image": "ficus.jpg",
+  "discount": null
  },
  {
   "id": 2,
   "name": "Santa Rita",
   "description": "Flor de papel, Santa Rita, o buganvillea menor, es una especie botánica de planta trepadora de la familia de las Nyctaginaceae; y es la más común de las especies para bonsái. Es nativa de Brasil.",
   "price": 1500,
-  "image": "santarita.jpg"
- }
+  "image": "santarita.jpg",
+  "discount": null
+ },
+ {
+  "id": 3,
+  "name": "Rosa",
+  "description": "El género Rosa está compuesto por un conocido grupo de arbustos generalmente espinosos y floridos representantes principales de la familia de las rosáceas. Se denomina rosa a la flor de los miembros de este género y rosal a la planta.",
+  "price": 2200,
+  "image": "rosa.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Jazmin",
+  "description": "El género Jasminum, cuyas alrededor de 200 especies reciben el nombre común de jazmín, son oriundas de las regiones tropicales y subtropicales del Viejo Mundo y ampliamente cultivadas. Crecen como arbustos y otras como trepadoras sobre otras plantas o guiadas sobre estructuras.",
+  "price": 1800,
+  "image": "jazmin.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Limonero",
+  "description": "Citrus × limon, el limonero, es un pequeño árbol frutal perenne. Su fruto es el limón ​ o citrón, ​ una fruta comestible de sabor ácido y extremadamente fragante que se usa principalmente en la alimentación. La mayoría de las variedades producen frutos durante todo el año.",
+  "price": 2600,
+  "image": "limonero.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Naranjo",
+  "description": "Árbol frutal de tronco liso y gris, copa abierta, hojas perennes, verdes y ovaladas, flores blancas y olorosas (azahar) agrupadas en pequeños racimos, y fruto (naranja) en forma de baya circular rodeado de una cáscara gruesa de color naranja; puede alcanzar hasta 5 m de altura.",
+  "price": 2600,
+  "image": "naranjo.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Mandarino",
+  "description": "Citrus reticulata es una especie del género Citrus, en la familia de las rutáceas, nativa del sudeste asiático y Filipinas.​ Se conoce popularmente por el nombre de mandarino y sus frutos como mandarina, si bien estas denominaciones no son exclusivas, ya que Citrus × tangerina recibe el mismo nombre.",
+  "price": 2600,
+  "image": "mandarino.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Boj Común",
+  "description": "Buxus sempervirens, el boj común, es un arbusto o pequeño árbol siempreverde, originario de Europa, donde crece en forma silvestre desde las Islas Británicas hasta la costa del mar Mediterráneo y del mar Caspio.",
+  "price": 1200,
+  "image": "buxus.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Planta De Tuya Thuja",
+  "description": "Pinus es un género de plantas vasculares, comúnmente llamadas pinos, pertenecientes al grupo de las coníferas y, dentro de este, a la familia de las Pinaceae, que presentan una ramificación frecuentemente verticilada y más o menos regular.",
+  "price": 2300,
+  "image": "pino.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Photus",
+  "description": "El poto o Epipremnum aureum es una de las plantas de interior más populares. Su porte colgante, sus llamativas hojas en forma de corazón y su capacidad de depurar el aire la convierten en una planta ideal para el hogar.",
+  "price": 2300,
+  "image": "pothus.jpg"
+ },
+ {
+    "id": 11,
+    "name": "Helecho",
+    "description": "Los helechos son plantas vasculares sin semilla, cuyas características morfológicas más sobresalientes son sus hojas grandes, usualmente pinadas y con prefoliación circinada.",
+    "price": 1400,
+    "image": "helecho.jpg"
+   },
+   {
+    "id": 12,
+    "name": "Arecáceas",
+    "description": "Las arecáceas son una familia de plantas monocotiledóneas, la única familia del orden Arecales. Normalmente se las conoce como palmeras o palmas",
+    "price": 3200,
+    "image": "aracaceas.jpg"
+   },
+   {
+    "id": 13,
+    "name": "Sansevieria",
+    "description": "Dracaena es un género de herbáceas, perennes y rizomatosas de la familia Asparagaceae, anteriormente en Ruscaceae. Ahora se la ha incluido en el género Dracaena debido a los estudios moleculares de su filogenia.​​​ Tradicionalmente este género ha sido incluido dentro de una definición amplia de la familia Liliaceae.",
+    "price": 3600,
+    "image": "Sansevieria.jpg"
+   },
+   {
+    "id": 14,
+    "name": "Zamioculcas",
+    "description": "Traducción del inglés-Zamioculcas es un género de plantas con flores perteneciente a la familia Araceae, que contiene la única especie Zamioculcas zamiifolia. Es una planta tropical perenne originaria del este de África, desde el sur de Kenia hasta el noreste de Sudáfrica",
+    "price": 2150,
+    "image": "zamioculcas.jpg"
+   },
+   {
+    "id": 15,
+    "name": "Cunas de Moisés",
+    "description": "El Spathiphyllum es un género de plantas con flores de la familia Araceae. Es originario de México, América tropical, Malasia y oeste del Pacífico. Son plantas perennes herbáceas con hojas grandes de 12-65 cm de largo y 3,25 cm de ancho.",
+    "price": 2300,
+    "image": "moises.jpg"
+   },
+   {
+    "id": 16,
+    "name": "Monstera",
+    "description": "Monstera es un género con cerca de 60 especies descritas​ de plantas con flores perteneciente a la familia Araceae. Es originario de México y América tropical.​",
+    "price": 2400,
+    "image": "monstera.jpg"
+   },
+   {
+    "id": 17,
+    "name": "Hiedra común",
+    "description": "La hiedra común o Hedera helix es una especie botánica de hiedra originaria de los bosques húmedos del oeste, el centro y el sur de Europa, norte de África y Asia, desde la India hasta Japón.",
+    "price": 1100,
+    "image": "hiedra.jpg"
+   },
+   {
+    "id": 18,
+    "name": "Aglaonema",
+    "description": "Aglaonema es un género de 20 especies de plantas de flores perteneciente a la familia Araceae, nativo de las selvas tropicales húmedas del sudoeste de Asia desde Bangladés a Filipinas y norte y sur de China.",
+    "price": 2600,
+    "image": "aglaonema.jpg"
+   },
+   {
+    "id": 19,
+    "name": "Laurel benjamín",
+    "description": "Ficus benjamina, llamado vulgarmente de igual manera, boj o laurel de la india en Costa Rica, amate en México, ​ y en América del Sur se le conoce como caucho benjamina o matapalo. Es una higuera nativa del sur y sureste de Asia, y sur y norte de Australia. Es el árbol oficial de Bangkok, Tailandia.",
+    "price": 1800,
+    "image": "laurel.jpg"
+   },
+   {
+    "id": 20,
+    "name": "Árbol del caucho",
+    "description": "Ficus elastica, llamado comúnmente árbol del caucho, ​ o gomero, es una especie perennifolia del género Ficus, nativa del nordeste de India, oeste de Indonesia. Fue introducida en Europa en 1815 como planta de interior.",
+    "price": 4600,
+    "image": "gomero.jpg"
+   }
 ]

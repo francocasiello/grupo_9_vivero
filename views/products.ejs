@@ -8,43 +8,42 @@
      
       <main>
         <% products.forEach((prod) => { %>
-        <section class = seccionproducto>
-            <a href="/products/<%= prod.id %>"></a>
+            <div class = seccionproducto>
+                
+            
+            
             <div class = imagenproducto>
                 <a href="/products/<%= prod.id %>"><img src = "/images/products/<%= prod.image %>" class= "producto1"></a>
             </div>
             <div class = datosproducto>
-                <div>
-                    <h2 class = tituloproducto>
+                <a href="/products/<%= prod.id %>"> <h2 class = tituloproducto>
                         <%= prod.name %>
-                    </h2>
-                    <h5>
-                        VER MEDIOS DE PAGO
-                     </h5>
-                     <h5>
-                        CALCULAR COSTOS DE ENVIO
-                     </h5> 
-                </div>
-          
-                <div class = "cantidad-agregar">
-                    <h5>
-                        CANTIDAD  :
-                     </h5>
+                    </h2></a>
+                    <a href="/products/<%= prod.id %>"> <h5> MAS INFORMACIÓN </h5> </a>
                      <div class = cantidad>
-                        <form action="/" method="GET" class="formulario-cantidad">
+                         <div>
+                        <h5>
+                            CANTIDAD:
+                         </h5>
+                        </div>
+                        <div>
+                         <form action="/" method="GET" class="formulario-cantidad">
                             <div class = "control-formulario">
                                 <input type="text" name="cantidad" placeholder="1" class="control" required>
-                                <span class="feedback"></span>
-                            </div>
-                     </div>
-                     <h6>
-                         AGREGAR
-                     </h6> 
-                </div>
-               
+                                <span class="feedback"></span> </div>
+                            </form>
+                        </div>
+                        <div>
+                        <h6>
+                        AGREGAR AL CARRITO
+                        </h6> 
+                    </div>
+                    </div>
+                     
             </div>
            
-        </section>
+        </div>
+  
         <% }) %>
     </main>
 

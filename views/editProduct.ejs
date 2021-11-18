@@ -8,30 +8,33 @@
 
     <main>
     <section class = "login">
-         <h2>
-            EDITA EL PRODUCTO:  <i><%= productToEdit.name %>
+        <h2 class = tituloproducto>
+            EDITA EL PRODUCTO: <%= productToEdit.name %>
         </h2>
-          <h3>
-           Edita tu producto para vender. ¡Cuanta más información pongas e imagenes más pronto se venderá!
-        </h3>
-    </section>
-    <section class = formulariologin>
+      </section>
+    
+    <section class = formularioEditar>
+        <div class = imagenproducto>
+            <img src = "/images/products/<%= productToEdit.image %>" class= "Imagen del <%= productToEdit.name %>">
+        </div>
         <div class = formulario>
             <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <!-- <form action="/" method="GET" class="formulario-registracion">-->
                     <div class = "control-formulario">
-                        <input type="text" name="name" placeholder="Nombre del Producto" minlength="2" value="<%= productToEdit.name %>" class="form-input">
+                        <input type="text" name="name" placeholder="Nombre del Producto" minlength="2" value="<%= productToEdit.name %>" class="control">
                         <span class="feedback"></span>
                     </div>
                     <div class = "control-formulario">
-                        <input type="textarea" name="description" placeholder="Descripción" value="<%= productToEdit.description %>" class="form-input" >
-                    </div>
-                    <div class = "control-formulario"> 
-                        <label>Subir imagen:</label>
-                        <input type="file" name ="image" accept=".jpg, .png" multiple>
+                        <input type="textarea" rows="20" name="description" placeholder="Descripción" value="<%= productToEdit.description %>" class="control" >
                     </div>
                     <div class = "control-formulario">
-                        <input type="number" name="price" placeholder="Precio" class="form-input" value="<%= productToEdit.price %>">
+                        <label>Subir imagen:</label></div>
+                        <div class = "control-formulario"> 
+                            <label class= boton-formulario  style = "color: white" for = "image">Elegi tu foto</label>
+                            <input type="file" name ="image" id = "image" accept=".jpg " multiple>
+                         </div>
+                    <div class = "control-formulario">
+                        <input type="number" name="price" placeholder="Precio" class="control" value="<%= productToEdit.price %>">
                     </div>
                     <div class = "control-formulario">
                         <p>Categoría</p>
@@ -54,14 +57,11 @@
                      </div>
                      </div>
                     <button type="submit" class="boton-formulario">Modificar</button>
-                    <button type="reset" class="boton-formulario">Borrar</button>
+                    <button type="reset" class="boton-formulario">Resetear</button>
                  </form>
                  <form action="/products/<%= productToEdit.id %>?_method=DELETE" method="POST" >
-                    <button type="submit" class="formulario">ELIMINAR</button>
+                    <button type="submit" class="boton-eliminar">ELIMINAR</button>
                     </form>
-        </div>
-             <div class = productoeditar>
-                <img src = "/images/products/<%= productToEdit.image %>" class= "Imagen del <%= productToEdit.name %>">
             </div>
         </div>
        </section>

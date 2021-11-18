@@ -24,7 +24,7 @@
                         <span class="feedback"></span>
                     </div>
                     <div class = "control-formulario">
-                        <input type="text" name="user" placeholder="Nombre de usuari@" class="control" required>
+                        <input type="mail" name="mail" placeholder="Mail de usuario" class="control" required>
                     </div>
                     <div class = "control-formulario">
                         <label>Fecha de nacimiento:</label>
@@ -33,10 +33,12 @@
                     <div class = "control-formulario">
                         <input type="text" name="domi" placeholder="Domicilio" class="control" required>
                     </div>
-                    <div class = "control-formulario"> 
-                        <label>Foto de usuario:</label>
-                        <input type="file" name ="avatar" accept=".jpg, .png" multiple>
-                    </div>
+                    <div class = "control-formulario">
+                        <label>Subir imagen:</label></div>
+                        <div class = "control-formulario"> 
+                            <label class= boton-formulario  style = "color: white" for = "image">Elegi tu foto</label>
+                            <input type="file" name ="image" id = "image" accept=".jpg " multiple>
+                         </div>
                     <div class = "control-formulario">
                         <label>Contraseña:</label>
                         <input type="password" name ="password" class ="control" required>

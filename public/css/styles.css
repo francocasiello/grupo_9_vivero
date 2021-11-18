@@ -3,10 +3,28 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Rosario', sans-serif;
-    font-size: 14px;
+    font-size: 0.99rem;
     text-decoration:none;
     font-style: normal;
 }
+
+.mediosdepago {
+    width: 50%;
+}
+
+.mediosdepagotext + .mediosdepago {
+    display: none;
+     transition: all 1000ms;
+  
+}
+
+
+.mediosdepagotext:hover + .mediosdepago {
+    display: block;
+    color: black;
+    transition: all 1000ms;
+ }
+
 
 .link {
     color: white;
@@ -17,9 +35,10 @@
 
 .link:hover {
     font-weight:900;
-    font-size: 15px;
+    font-size: 1.1rem;
 
 }
+
 
 .home {
     background-image: url("../images/background-index.jfif");
@@ -74,6 +93,38 @@ header {
     margin-right: 5px;
     }
 
+.barra-busqueda input {
+    color: white;
+    border:none;
+    background-color: #227150;
+    width: 70%;
+    height: 100%;    
+    }
+
+.barra-busqueda ::placeholder {
+    color: white;
+    }
+
+.barra-busqueda form {
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+.barra-busqueda:active {
+        color: white;
+        border: none;
+        }
+
+.barra-busqueda i {
+    color: white;
+    border:none;
+    background-color: #227150;
+    width: 100%;
+    height: 100%;    
+    }
+
 .burger-menu {
         background-color: #227150;
         color: white;
@@ -101,9 +152,7 @@ ul li {
         list-style:none;
         }
 
-header i {
-    font-size: 25px;
-}
+
 
 .iconos {
     display: none;
@@ -242,6 +291,13 @@ footer {
     display: none;
 }
 
+/****EDITAR ****/
+.formularioEditar {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    }
+
 /******* LOGIN *****/
 
 .formulariologin {
@@ -295,12 +351,14 @@ footer {
     justify-content: center;
     display: flex;
     color: black;
+    text-shadow: none;
 }
 
 .control-formulario label{
     margin-bottom: 5px;
-    font-style: italic;
     display: block;
+    text-shadow: none;
+    color:rgba(43, 179, 122, 0.95)
 }
 
 .control-formulario{
@@ -324,12 +382,15 @@ label {
 }
 
 .control {
-    width: 100%;
     padding: 8px;
-    box-shadow: 0px 0px 10px rgb(187, 187, 187);
-    border: none;
-    border-radius: 5px;
+        box-shadow: 0px 4px 4px rgb(224 231 226);
+        border: none;
+        border-radius: 5px;
+        color: black;
+        font-weight: bolder;
+        width: 100%;
 }
+
 .boton-formulario {
     background-color: rgba(43, 179, 122, 0.95);
     width: 100px;
@@ -339,13 +400,34 @@ label {
     font-size: 12px;
     padding: 5px 10px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: 0px 4px 4px rgb(224, 231, 226);
     transition: all 400ms;
-    
 }
 
 .boton-formulario:hover {
     background-color: #227150;
+ }
+
+ .boton-eliminar {
+    background-color: rgba(43, 179, 122, 0.95);
+    width: 200px;
+    height: 25px;
+    color: white;
+    border: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgb(224, 231, 226);
+    transition: all 400ms;
+    margin-left: -15px;
+}
+
+.boton-eliminar:hover {
+    background-color: #661e1e;
+ }
+
+.control-formulario-label .boton-formulario {
+    color: white;
 }
 
 .boton-formulario-enviar {
@@ -399,33 +481,51 @@ form {
 
 /****** PRODUCTOS ******/
 
-.seccionproducto{
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;    
+.tituloproducto {
+    text-transform: uppercase;
 }
 
+.seccionproducto{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgb(224, 231, 226);
+    transition: 500ms all;
+}
+
+.seccionproducto:hover{
+   background-color: #e5f5e5;
+}
+
+.seccionproducto:hover .imagenproducto img{
+    width: 21em;
+    height: 21em;
+    box-shadow: 0px 0px 10px rgb(223, 221, 221);
+ }
+
+ .seccionproducto:hover a{
+    color: grey;
+ }
 
 .imagenproducto img {
-    width: 90%;
-    height: 500px;
-    margin: 10%;
+    width: 20em;
+    height: 20em;
+    margin: auto 0px auto auto;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     transition: 1s;
-    border-radius: 1%;
-    }
+    border-radius: 50px;
+}
 
-    .imagenproducto img:hover {
-        height: 510px;
-        }
 
 .imagenproducto {
     width: 90%;
     display: flex;
     justify-content: center;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
     margin: 20px;   
 }
 
@@ -436,6 +536,10 @@ form {
     width: 90%;
     text-shadow: none;
     margin-left: 20px;
+}
+
+.datosproducto a{
+    color:rgba(43, 179, 122, 0.95);
 }
 
 .datosproducto h2 {
@@ -451,7 +555,7 @@ form {
 .datosproducto h5 {
     font-size: 25px;
     margin-bottom: 5px;
-    margin-top: 15px;
+    margin-top: 0px;
 }
 
 .datosproducto h4 {
@@ -463,13 +567,12 @@ form {
    background-color: rgba(43, 179, 122, 0.95);
    box-shadow: rgb(100, 100, 100);
    border-radius: 30px;
-   width: 100px;
    height: 30px;
    display: flex;
    align-content: center;
-    justify-content: center;
-    align-items: center;
-
+   justify-content: center;
+   align-items: center;
+   width: 200px;
 }
 
 .cantidad-agregar {
@@ -484,8 +587,19 @@ form {
 
 .cantidad {
     margin-right: 10px;
-    width: 15%;
+}
 
+.cantidad1 {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.cantidad1 a {
+    color: white;
+}
+
+.cantidad1 a:hover {
+    color: white;
 }
 
 /**** CARRITO ****/
@@ -612,6 +726,15 @@ form {
    background-color: #227150;
 }
 
+
+.elegirarchivo {
+    color: white;
+}
+
+input[type = "file"] {
+    display: none;
+}
+
 /***************TABLET****************/
 
 @media (min-width: 450px) {
@@ -690,6 +813,14 @@ h3 {
     position: fixed;
     }
 
+
+/****EDITAR ****/
+.formularioEditar {
+    display: flex;
+    padding-bottom: 40px;
+    flex-direction: row;
+    }
+
 /****** PRODUCTOS TABLET ******/
 
 /***CARRITO***/
@@ -714,17 +845,14 @@ h3 {
 
 .seccionproducto{
     display: flex;
-    margin-top: 20px;
     flex-direction: row;
     justify-content: center
 }
 
 .imagenproducto {
-    width: 30%;
+    width: 50%;
     display: flex;
-    justify-content: center;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    justify-content: flex-end;
     margin: 20px;   
 }
 
@@ -732,7 +860,11 @@ h3 {
     color:rgba(43, 179, 122, 0.95);
     width: 50%;
     text-shadow: none;
-   
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .datosproducto h2 {
@@ -748,7 +880,6 @@ h3 {
 .datosproducto h5 {
     font-size: 25px;
     margin-bottom: 5px;
-    margin-top: 15px;
 }
 
 .datosproducto h4 {
@@ -767,6 +898,8 @@ h3 {
     transition: all 1s;
 }
 
+.footer {
+position:absolute;
 }
 
 
@@ -781,7 +914,8 @@ h3 {
 header {
     padding: 50px
 }
-    
+
+
 .barra-titulo{
     display: flex;
     width: 90%;
