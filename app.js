@@ -31,11 +31,13 @@ app.listen(3000, () => {
 });
 
 
-const mainRouter = require("./src/routes/main");
-const productsRouter = require('./src/routes/products');
+const mainRoutes = require("./src/routes/mainRoutes");
+const productsRoutes = require('./src/routes/productsRoutes');
+const userRoutes = require("./src/routes/userRoutes")
 
-app.use("/", mainRouter);
-app.use('/products', productsRouter);
+app.use("/", mainRoutes);
+app.use('/products', productsRoutes);
+app.use("/user", userRoutes)
 
 
 
