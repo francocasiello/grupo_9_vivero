@@ -5,12 +5,18 @@
         </section>
            
     <nav class= "barra-titulo">  
+    <% if (locals.isLogged) {%>
     <ul>
         <li><a class ="link" href = "/products">PRODUCTOS</a></li>
-        <li><a class ="link" href = "/user/register">REGISTRATE</a></li>
         <li><a class ="link" href = "/products/create">AGREGAR PRODUCTO</a></li>
     </ul>
-    </nav>
+    </nav>          
+    <% } else {%>
+        <ul>
+            <li><a class ="link" href = "/products">PRODUCTOS</a></li>
+            <li><a class ="link" href = "/user/register">REGISTRATE</a></li>
+        </ul>
+    <% } %>
 
     <div class = "barra-busqueda">
         <form action="/search" method="GET">

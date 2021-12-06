@@ -39,6 +39,11 @@
 
 }
 
+.errores {
+    color:red;
+    margin-top: 5px;
+    margin-left: 5px;
+}
 
 .home {
     background-image: url("../images/background-index.jfif");
@@ -77,6 +82,12 @@ header {
     display: flex;
     align-items: center;
     width: 50%;
+}
+
+.profilePicture {
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px #666;
+    
 }
 
 .barra-busqueda {

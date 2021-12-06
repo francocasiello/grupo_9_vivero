@@ -1,82 +1,127 @@
 [
-    {
-    "name": "Franco",
-    "lastname": "Casiello",
-    "age": 33,
-    "direction": "Mendoza 1116",
-    "password": "", 
-    "mail": "francocasiello@gmail.com"
-    },
-    {
-    "name": "Luciana",
-    "lastname": "Perez",
-    "age": 34,
-    "direction": "Balcarce 1088",
-    "password": "",
-    "mail": "lulaperez@gmail.com"    
-    },
-    {
-    "name": "Gabriela",
-    "lastname": "Riva",
-    "age": 61,
-    "direction": "Oroño 124",
-    "password": "",
-    "mail": "griva@gmail.com"  
-    },
-    {
-    "name": "Nicolas",
-    "lastname": "Cardigni",
-    "age": 29,
-    "direction": "San Juan 2345",
-    "password": "",
-    "mail": "nico_cardito@yahoo.com"  
-    },
-    {
-    "name": "Alejandro",
-    "lastname": "Pinarello",
-    "age": 30,
-    "direction": "Godoy 500 4C",
-    "password": "",
-    "mail": "alepita@gmail.com"  
-    },
-    {
-    "name": "Florencia",
-    "lastname": "Milano",
-    "age": 37,
-    "direction": "Pueyrredon 212",
-    "password": "",
-    "mail": "f_milano@gmail.com"  
-    },
-    {
-    "name": "Belen",
-    "lastname": "Buzey",
-    "age": 36,
-    "direction": "Italia 2420",
-    "password": "",
-    "mail": "belubuzey@gmail.com"  
-    },
-    {
-    "name": "Lucas",
-    "lastname": "Gotileb",
-    "age": 41,
-    "direction": "Buenos Aires 43 P4",
-    "password": "",
-    "mail": "luquitasgotlieb@gmail.com"  
-    },
-    {
-    "name": "Rafael",
-    "lastname": "Menossi",
-    "age": 40,
-    "direction": "Viamonte 2432 2E",
-    "password": "",
-    "mail": "rmenossi_facha@gmail.com"  
-    },
-    {
-    "name": "Bruno",
-    "lastname": "Fantin",
-    "age": 38,
-    "direction": "Cordoba 748 9 D",
-    "password": "",
-    "mail": "bfantin_nob@gmail.com"  
-    }
-    ]
+ {
+  "id": 1,
+  "fullName": "Franco Casiello",
+  "direction": "Mendoza 1116",
+  "password": "",
+  "mail": "francocasiello@gmail.com",
+  "avatar": "default.png"
+ },
+ {
+  "id": 2,
+  "fullName": "Luciana Perez",
+  "direction": "Balcarce 1088",
+  "password": "",
+  "mail": "lulaperez@gmail.com",
+  "avatar": "default.png"
+ },
+ {
+  "id": 3,
+  "fullName": "Gabriela Riva",
+  "direction": "Oroño 124",
+  "password": "",
+  "mail": "griva@gmail.com",
+  "avatar": "default.png"
+ },
+ {
+  "id": 4,
+  "fullName": "Nicolas Cardigni",
+  "direction": "San Juan 2345",
+  "password": "",
+  "mail": "nico_cardito@yahoo.com",
+  "avatar": "default.png"
+ },
+ {
+  "id": 5,
+  "fullName": "Alejandro Pinarello",
+  "direction": "Godoy 500 4C",
+  "password": "",
+  "mail": "alepita@gmail.com",
+  "avatar": "default.png"
+ },
+ {
+  "id": 6,
+  "nafullNameme": "Florencia Milano",
+  "direction": "Pueyrredon 212",
+  "password": "",
+  "mail": "f_milano@gmail.com",
+  "avatar": "default.png"
+ },
+ {
+  "id": 7,
+  "fullName": "Belen Buzey",
+  "direction": "Italia 2420",
+  "password": "",
+  "mail": "belubuzey@gmail.com",
+  "avatar": "default.png"
+ },
+ {
+  "id": 8,
+  "fullName": "Lucas Gotlieb",
+  "direction": "Buenos Aires 43 P4",
+  "password": "",
+  "mail": "luquitasgotlieb@gmail.com",
+  "avatar": "default.png"
+ },
+ {
+  "id": 9,
+  "fullName": "Rafael Menossi",
+  "direction": "Viamonte 2432 2E",
+  "password": "",
+  "mail": "rmenossi_facha@gmail.com",
+  "avatar": "default.png"
+ },
+ {
+  "id": 10,
+  "fullName": "Bruno Fantin",
+  "direction": "Cordoba 748 9 D",
+  "password": "",
+  "mail": "bfantin_nob@gmail.com",
+  "avatar": "default.png"
+ },
+ {
+  "id": 11,
+  "fullName": "Luciana M Perez",
+  "email": "francocasiellasdo@gmaail.comasdasas",
+  "fecha": "2021-02-02",
+  "direction": "asdasd",
+  "password": "$2a$10$lAPBb4i9JgCaB9iuveP1xOknoiU.Phbof06.p15g0ZDF/P8UAjX7O",
+  "avatar": "avatar-1638674211632.jpg"
+ },
+ {
+  "id": 12,
+  "fullName": "Franco Clarabello",
+  "email": "fcasiello@gmail.com",
+  "birthday": "2021-11-28",
+  "direction": "asdasd",
+  "password": "$2a$10$r0o5zOp859R9o/tVD05DJ.Tky2D78QiH0XvRu6TJ99WqN9cIljr2a",
+  "avatar": "avatar-1638675333658.jpg"
+ },
+ {
+  "id": 13,
+  "fullName": "asdas",
+  "email": "sd@ash.com",
+  "birthday": "2021-11-29",
+  "direction": "asdas",
+  "password": "$2a$10$rgZ2RfyKNz6qS9nNucJR4OeolOjwlNv7k4PgZObweiBpKE0RxKHSK",
+  "avatar": "avatar-1638750500595.jpg"
+ },
+ {
+  "id": 14,
+  "fullName": "Luciana M Perez",
+  "email": "francocasiello@gmail.com",
+  "birthday": "2021-11-29",
+  "direction": "asdas",
+  "password": "$2a$10$sQrQOg7ksfxwU4raVED9QexM3qqwyYrM0NwBLkcmp9m7Wfgm78UdC",
+  "avatar": "avatar-1638750513102.jpg"
+ },
+ {
+  "id": 15,
+  "fullName": "Luciana M Perez",
+  "email": "lulaperez@gmail.com",
+  "birthday": "",
+  "direction": "asdas",
+  "password": "$2a$10$4RYmifJF.ChAuJpgM7Z8zuYJgvXvnJCDfBKuxYeu12ftSWmuItj5y",
+  "avatar": "avatar-1638750622942.jpg"
+ }
+]
