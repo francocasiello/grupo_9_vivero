@@ -27,6 +27,11 @@ loginProcess: (req, res ) => {
         if(isOkThePassword) {
             delete userToLogin.password;
             req.session.userLogged = userToLogin;
+
+            if(req.body.remember_user) {
+                res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 5})
+            }
+        
             return res.redirect("profile")
         }
         return res.render("login", {
@@ -83,19 +88,22 @@ processRegister: (req, res) => {
     return res.redirect("/user/login")
 },
 
-logout: (req, res) => {
-    req.session.destroy();
-    return res.redirect("/");
-},
 
 profile: (req, res) => { 
+    console.log(req.cookies.userEmail);
     return res.render("userProfile", {
         user: req.session.userLogged
     })
-}
+},
 
+logout: (req, res) => {
+    res.clearCookie("userEmail");
+    console.log("eraaaaaaaaaaa");
+    console.log(res.cookie.userEmail);
+    req.session.destroy();
+    return res.redirect("/");
+}
 };
 
 
-// Acá exportamos el resultado
 module.exports= usersController

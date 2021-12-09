@@ -38,8 +38,10 @@
                         <p class = errores><%= errors.password.msg %></p>
                     <% } %>
                 </div>
-                 <div>
-                    <p class= "olvidaste">¿Olvidaste tu contraseña?</p>
+                 <div class= "olvidaste">
+                     <label class="form-check-input">
+                    <input type="checkbox" class= "form-check-input" name= "remember_user"> Recordar Usuario
+                    </label>
                 </div>
                 <button type="submit" class="boton-formulario-enviar">Enviar</button>
                 </form>

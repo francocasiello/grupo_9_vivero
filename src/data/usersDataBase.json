@@ -4,7 +4,7 @@
   "fullName": "Franco Casiello",
   "direction": "Mendoza 1116",
   "password": "",
-  "mail": "francocasiello@gmail.com",
+  "email": "francocasiello@gmail.com",
   "avatar": "default.png"
  },
  {
@@ -12,7 +12,7 @@
   "fullName": "Luciana Perez",
   "direction": "Balcarce 1088",
   "password": "",
-  "mail": "lulaperez@gmail.com",
+  "email": "lulaperez@gmail.com",
   "avatar": "default.png"
  },
  {
@@ -20,7 +20,7 @@
   "fullName": "Gabriela Riva",
   "direction": "Oroño 124",
   "password": "",
-  "mail": "griva@gmail.com",
+  "email": "griva@gmail.com",
   "avatar": "default.png"
  },
  {
@@ -28,7 +28,7 @@
   "fullName": "Nicolas Cardigni",
   "direction": "San Juan 2345",
   "password": "",
-  "mail": "nico_cardito@yahoo.com",
+  "email": "nico_cardito@yahoo.com",
   "avatar": "default.png"
  },
  {
@@ -36,7 +36,7 @@
   "fullName": "Alejandro Pinarello",
   "direction": "Godoy 500 4C",
   "password": "",
-  "mail": "alepita@gmail.com",
+  "email": "alepita@gmail.com",
   "avatar": "default.png"
  },
  {
@@ -44,7 +44,7 @@
   "nafullNameme": "Florencia Milano",
   "direction": "Pueyrredon 212",
   "password": "",
-  "mail": "f_milano@gmail.com",
+  "email": "f_milano@gmail.com",
   "avatar": "default.png"
  },
  {
@@ -52,7 +52,7 @@
   "fullName": "Belen Buzey",
   "direction": "Italia 2420",
   "password": "",
-  "mail": "belubuzey@gmail.com",
+  "email": "belubuzey@gmail.com",
   "avatar": "default.png"
  },
  {
@@ -60,7 +60,7 @@
   "fullName": "Lucas Gotlieb",
   "direction": "Buenos Aires 43 P4",
   "password": "",
-  "mail": "luquitasgotlieb@gmail.com",
+  "email": "luquitasgotlieb@gmail.com",
   "avatar": "default.png"
  },
  {
@@ -68,7 +68,7 @@
   "fullName": "Rafael Menossi",
   "direction": "Viamonte 2432 2E",
   "password": "",
-  "mail": "rmenossi_facha@gmail.com",
+  "email": "rmenossi_facha@gmail.com",
   "avatar": "default.png"
  },
  {
@@ -76,7 +76,7 @@
   "fullName": "Bruno Fantin",
   "direction": "Cordoba 748 9 D",
   "password": "",
-  "mail": "bfantin_nob@gmail.com",
+  "email": "bfantin_nob@gmail.com",
   "avatar": "default.png"
  },
  {
@@ -96,32 +96,5 @@
   "direction": "asdasd",
   "password": "$2a$10$r0o5zOp859R9o/tVD05DJ.Tky2D78QiH0XvRu6TJ99WqN9cIljr2a",
   "avatar": "avatar-1638675333658.jpg"
- },
- {
-  "id": 13,
-  "fullName": "asdas",
-  "email": "sd@ash.com",
-  "birthday": "2021-11-29",
-  "direction": "asdas",
-  "password": "$2a$10$rgZ2RfyKNz6qS9nNucJR4OeolOjwlNv7k4PgZObweiBpKE0RxKHSK",
-  "avatar": "avatar-1638750500595.jpg"
- },
- {
-  "id": 14,
-  "fullName": "Luciana M Perez",
-  "email": "francocasiello@gmail.com",
-  "birthday": "2021-11-29",
-  "direction": "asdas",
-  "password": "$2a$10$sQrQOg7ksfxwU4raVED9QexM3qqwyYrM0NwBLkcmp9m7Wfgm78UdC",
-  "avatar": "avatar-1638750513102.jpg"
- },
- {
-  "id": 15,
-  "fullName": "Luciana M Perez",
-  "email": "lulaperez@gmail.com",
-  "birthday": "",
-  "direction": "asdas",
-  "password": "$2a$10$4RYmifJF.ChAuJpgM7Z8zuYJgvXvnJCDfBKuxYeu12ftSWmuItj5y",
-  "avatar": "avatar-1638750622942.jpg"
  }
 ]
