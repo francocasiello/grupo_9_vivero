@@ -7,19 +7,25 @@
     <%- include("./partials/header.ejs") %>
 
     <main>
-    <section class = "login">
-         <h2>
-            Bienvenido <%= user.fullName %>
+    <section class = "profile">
+      <div class = "profileDates">
+      <img class="profilePicture" src="/images/avatars/<%= user.avatar %>" alt="Tu imagen de perfil">
+    </div>
+    <div>
+        <h2 class = "profileName">
+            Bienvenido <br>
+            <%= user.fullName %>
         </h2>
-          <h3>
-           Tu email es: <%= user.email %>
-        </h3>
+          <h2 class = "profileEmail"> 
+           Tu email es: <br>
+           <%= user.email %>
+        </h2<% include  %> >
         <br>
         <h3>
-        <a class="boton-eliminar" href = "/user/logout">LOGOUT</a>
+        <a class="botonLogout" href = "/user/logout">LOGOUT</a>
         </h3>   
-        <br>
-        <img class="profilePicture" src="/images/avatars/<%= user.avatar %>" alt="Tu imagen de perfil">
+      </div>
+       
     </section>
     </main>
 
