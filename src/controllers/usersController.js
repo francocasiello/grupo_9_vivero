@@ -3,8 +3,6 @@ const app = express();
 const path = require("path")
 const fs = require('fs');
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
@@ -14,49 +12,74 @@ const User = require("../models/User")
 
 const bcryptjs = require("bcryptjs");
 
+const db = require("../../database/models")
+const sequelize = db.sequelize;
+const Usuario = db.Usuario;
+const Op = db.Sequelize.Op;
+
+
+
 const usersController = {
 login: (req, res) => { 
     return res.render("login")
 },
 
-loginProcess: (req, res ) => {
-    let userToLogin = User.findByField("email", req.body.email);
-    
-    if(userToLogin) {
-        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
-        if(isOkThePassword) {
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin;
 
-            if(req.body.remember_user) {
-                res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 5})
-            }
-        
-            return res.redirect("profile")
-        }
-        return res.render("login", {
-            errors: {
-                password: {
-                    msg: "Contraseña incorrecta"
+//loginProcess: (req, res ) => {
+//    let userToLogin = db.Usuario.findOne({
+//        where : {
+//            email: req.body.email
+//        }
+//    }).then ((resultado) => {
+//        console.log(resultado); 
+//    })
+
+loginProcess: (req, res ) => {
+    let userToLogin = Usuario.findOne({
+              where : {
+                  email: req.body.email
                 }
-            }
-        })
-    } 
+            }).then ((userToLogin) => {
+              if(userToLogin) {
+                  let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+                  if(isOkThePassword) {
+                      delete userToLogin.password;
+                      req.session.userLogged = userToLogin;
+          
+                      if(req.body.remember_user) {
+                          res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 5})
+                      }
+                  
+                      return res.redirect("profile")
+                  }
+                  return res.render("login", {
+                      errors: {
+                          password: {
+                              msg: "Contraseña incorrecta"
+                          }
+                      }
+                  })
+              } 
+              
+              return res.render("login", {
+                  errors: {
+                      email: {
+                          msg: "Usuario no encontrado"
+                      }
+                  }
+              })
+              console.log(resultado); 
+          })
+    //User.findByField("email", req.body.email);
+    //console.log(userToLogin)
     
-    return res.render("login", {
-        errors: {
-            email: {
-                msg: "Usuario no encontrado"
-            }
-        }
-    })
 },
 
 register: (req, res) => { 
     return res.render("register")
 },
 
-processRegister: (req, res) => { 
+processRegister: async (req, res) => { 
     const resultValidation = validationResult(req);
     //return res.send(resultValidation.errors.length);
     if (resultValidation.errors.length > 0) {
@@ -66,17 +89,22 @@ processRegister: (req, res) => {
        });
     } 
 
-    let userInDB = User.findByField("email", req.body.email);
-    if (userInDB) {
-        return res.render ("register", {
-            errors: {
-                email: {
-                    msg: "Este email ya esta registrado"
-                }
-            },
-            oldData: req.body
-       });
-    }
+    let userInDB = Usuario.findOne({
+        where : {
+            email: req.body.email
+          }
+      }).then((userInDB) => {
+        if (userInDB) {
+            return res.render ("register", {
+                errors: {
+                    email: {
+                        msg: "Este email ya esta registrado"
+                    }
+                },
+                oldData: req.body
+           });
+        }
+      }) 
 
     let userToCreate = {
         ...req.body,
@@ -84,7 +112,7 @@ processRegister: (req, res) => {
         avatar: req.file.filename
     }
 
-    let userCreated = User.create(userToCreate);
+    let userCreated = await User.create(userToCreate);
     return res.redirect("/user/login")
 },
 
@@ -98,8 +126,6 @@ profile: (req, res) => {
 
 logout: (req, res) => {
     res.clearCookie("userEmail");
-    console.log("eraaaaaaaaaaa");
-    console.log(res.cookie.userEmail);
     req.session.destroy();
     return res.redirect("/");
 }

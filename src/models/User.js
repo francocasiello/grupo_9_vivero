@@ -4,6 +4,10 @@
 
 const fs = require ("fs");
 const path = require('path');
+const db = require("../../database/models")
+const sequelize = db.sequelize;
+const Usuario = db.Usuario;
+const Op = db.Sequelize.Op;
 
 
 const User = {
@@ -43,15 +47,16 @@ const User = {
     },
 
     // Guardar usuario en DB
-    create: function (userData) {
-        let allUsers = this.findAll();
-        let newUser = {
-            id: this.generateId(),
-            ...userData 
-        }
-        allUsers.push(newUser);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, " "));
-        return newUser;
+    create: async function (userData) {
+        return await Usuario.create (userData)
+     //   let allUsers = this.findAll();
+     //   let newUser = {
+     //       id: this.generateId(),
+      //      ...userData 
+     //   }
+     //   allUsers.push(newUser);
+      //  fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, " "));
+      //  return newUser;
     },
 
     // Eliminar usuario

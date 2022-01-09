@@ -10,9 +10,7 @@ const mainController = require("../controllers/mainController");
 router.get('/', mainController.index);
 router.get("/productCart", mainController.productCart);
 router.get("/index", mainController.index);
-//router.get("/productDetail", mainController.productDetail);
-//router.get("/newProduct", mainController.newProduct);
-//router.get("/editProduct", mainController.editProduct);
+
 
 // Acá exportamos el resultado
 

@@ -26,4 +26,8 @@ router.put('/:id', upload.single('image'), productsController.update);
 /*** DELETE ONE PRODUCT***/
 router.delete('/:id', productsController.destroy);
 
+/*** DELETE ONE PRODUCT***/
+router.get('/buscar', productsController.search);
+
+
 module.exports = router;

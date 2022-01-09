@@ -10,17 +10,17 @@
         <section class = seccionproducto>
             
             <div class = imagenproducto>
-                <img src = "/images/products/<%= products.image %>" class= "Imagen de <%= products.name %>">
+                <img src = "/images/products/<%= product.image %>" class= "Imagen de <%= product.name %>">
             </div>
             <div class = datosproducto>
                     <h2 class = tituloproducto>
-                        <%= products.name %>
+                        <%= product.name %>
                     </h2>
                     <h3>
-                       $ <%= products.price %>
+                       $ <%= product.price %>
                     </h3>
                     <h4>
-                        <%= products.description %>
+                        <%= product.description %>
                     </h4>
                     <h5 class = "mediosdepagotext">
                         VER MEDIOS DE PAGO
@@ -50,7 +50,7 @@
                        AGREGAR AL CARRITO
                        </h6> 
                        <h6 class = "linkedita">
-                        <a href="/products/edit/<%= products.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                        <a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
                       </h6>
                     </div>       
             </div>

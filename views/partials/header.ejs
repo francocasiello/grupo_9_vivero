@@ -35,7 +35,12 @@
     </section>
     <section class = "iconos">
         <a class ="link" href = "/productCart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-        <a class ="link" href = "/user/login"><i class="fa fa-user" aria-hidden="true"></i></a>
+        <% if (locals.isLogged) {%>
+        <a class ="link" href = "/user/login"><i class="fa fa-user" aria-hidden="true"></i></a>     
+            <% } else {%>
+        <a class ="link" href = "/user/login"><i class="fa fa-user" aria-hidden="true"></i></a>     
+            <% } %>
+        
      </section>
 
 

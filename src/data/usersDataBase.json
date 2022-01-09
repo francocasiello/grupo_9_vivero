@@ -96,5 +96,14 @@
   "direction": "asdasd",
   "password": "$2a$10$r0o5zOp859R9o/tVD05DJ.Tky2D78QiH0XvRu6TJ99WqN9cIljr2a",
   "avatar": "avatar-1638675333658.jpg"
+ },
+ {
+  "id": 13,
+  "fullName": "Franco Andres",
+  "email": "fra@a.com",
+  "birthday": "2022-01-04",
+  "direction": "Balcarce 1088",
+  "password": "$2a$10$miZMkc23bkoM2dCQQxeV9eyJlnLJthz7Phh02glT1lFBaeHzJMe1G",
+  "avatar": "avatar-1641606153990.jpg"
  }
 ]
