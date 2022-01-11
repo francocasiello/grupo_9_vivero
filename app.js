@@ -44,7 +44,7 @@ app.set("views", "views");
 
 
 app.listen(3000, () => {
-    console.log("///////////////TODO FUNCIONA!//////////////");
+    console.log("///////////////TODO FUNCIONA EN EL PUERTO 3000!//////////////");
 });
 
 
