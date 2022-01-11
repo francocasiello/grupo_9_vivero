@@ -525,6 +525,10 @@ h2.profileEmail {
     transition: all 1000ms;
 }
 
+.marginBotones {
+margin-bottom: 15px
+}
+
 .botonLogout:hover {
     background-color: #470808;
     color: white;
@@ -1105,6 +1109,7 @@ h2.profileEmail {
     font-weight: bold;
     padding: 5px 10px;
     transition: all 1000ms;
+
 }
 
 .botonLogout:hover {
