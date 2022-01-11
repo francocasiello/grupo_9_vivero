@@ -111,8 +111,8 @@ const productsController = {
 
     create: (req, res) => {
       db.Category.findAll()
-      .then(categorias => {
-        res.render('newProduct', {categorias});
+      .then(categoria => {
+        res.render('newProduct', {categoria});
       }).catch(error => {
         console.log(error)
       })// Renderizar el formulario de create
