@@ -19,22 +19,23 @@ module.exports = (sequelize, dataTypes) => {
         image: {
             type: dataTypes.CHAR
         },
-        categoria_id: {
-            type: dataTypes.INTEGER
-        }
+       // categoria_id: {
+        //    type: dataTypes.INTEGER
+       // }
     };
     let config = {
         tableName: 'productos',
-        timestamps: false
+        timestamps: false,
+        underscore: true
     };
     const Producto = sequelize.define(alias, cols, config)
 
-    //Producto.associate = (models) => {
-    //   Producto.belongsTo(models.Category, {
-    //        as: "category",
-    //        foreingKey: "categoria_id"
-    //    })
-    //};
+    Producto.associate = (models) => {
+       Producto.belongsTo(models.Category, {
+            as: "category",
+            foreignKey: "categoria_id"
+        })
+    };
 
     return Producto
 }

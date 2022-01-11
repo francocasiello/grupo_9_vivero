@@ -15,6 +15,9 @@ router.get('/create', productsController.create);
 /*** SUBMIT CREATE ONE PRODUCT ***/
 router.post('/', upload.single('image'), productsController.store);
 
+/*** BUSCAR ONE PRODUCT***/
+router.get('/search', productsController.search);
+
 /*** GET ONE PRODUCT (DETAIL) ***/
 router.get('/:id', productsController.detail);
 
@@ -26,8 +29,7 @@ router.put('/:id', upload.single('image'), productsController.update);
 /*** DELETE ONE PRODUCT***/
 router.delete('/:id', productsController.destroy);
 
-/*** DELETE ONE PRODUCT***/
-router.get('/search', productsController.search);
+
 
 
 module.exports = router;

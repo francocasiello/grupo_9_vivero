@@ -1,4 +1,9 @@
 const User= require("../models/User");
+const db = require("../../database/models");
+const sequelize = db.sequelize;
+const Usuario = db.Usuario;
+const Op = db.Sequelize.Op;
+
 
 function userLoggedMiddleware (req, res, next) {
     res.locals.isLogged = false;

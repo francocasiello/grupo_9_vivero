@@ -71,5 +71,8 @@ router.get("/profile", authMiddleware, usersController.profile);
 // LOGOUT
 router.get("/logout", usersController.logout);
 
+// ELIMINAR USUARIO
+router.get("/destroy", usersController.destroy);
+
 
 module.exports = router;
