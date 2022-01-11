@@ -73,14 +73,14 @@ const productsController = {
     update: (req, res) => {
       db.Producto.update ({
         name: req.body.name,
-        image: req.file ? req.file.filename : products[productIndex].image,
+        image: req.file ? req.file.filename : req.body.filename,
         price: req.body.price,
         description: req.body.description
     }, {
         where: { id : req.params.id}
     })
     .then (function(){
-        res.redirect("/products/edit/" + req.params.id)
+        res.redirect("/products/" + req.params.id)
     })
 },
       // Leemos el id que viene por url
