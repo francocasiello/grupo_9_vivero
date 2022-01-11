@@ -49,9 +49,14 @@
                        <h6>
                        AGREGAR AL CARRITO
                        </h6> 
-                       <h6 class = "linkedita">
+                       <% if (locals.isLogged) {%>
+                        <h6 class = "linkedita">
                         <a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
                       </h6>
+                            <% } else {%>
+                         
+                            <% } %>
+                       
                     </div>       
             </div>
            

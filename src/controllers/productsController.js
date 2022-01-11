@@ -10,7 +10,9 @@ const db = require("../../database/models")
 const sequelize = db.sequelize;
 
 //const Producto = db.Producto;
-const Op = db.Sequelize.Op;
+//const Op = db.Sequelize.Op;
+
+const {Op} = require("sequelize")
 
 const productsController = {
     // Root - Show all products
@@ -22,6 +24,8 @@ const productsController = {
       db.Producto.findAll()
           .then(productos => {
               res.render('products', {productos});
+          }).catch(error => {
+            console.log(error)
           })
     },
 
@@ -106,9 +110,14 @@ const productsController = {
 
 
     create: (req, res) => {
-      // Renderizar el formulario de create
+      db.Category.findAll()
+      .then(categorias => {
+        res.render('newProduct', {categorias});
+      }).catch(error => {
+        console.log(error)
+      })// Renderizar el formulario de create
       // No necesita parametros
-      res.render('newProduct');
+     // res.render('newProduct');
     },
 
     store: function (req, res) {
@@ -170,10 +179,12 @@ const productsController = {
       search: (req, res) => {
         db.Producto.findAll({
           where: {
-            name: {[Op.Like]: "%s%"} //req.body.keyword//
+            name: {[Op.substring]: req.query.keywords } 
           }
-        }).then(product => {
-                res.render('search', {product});
+        }).then(productos => {
+                res.render("search", {productos});
+            }).catch(error => {
+              console.log(error)
             })
         },
        
