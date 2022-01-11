@@ -1,0 +1,39 @@
+CREATE TABLE `User` (
+   `id` INT,
+   `first name` VARCHAR(255),
+   `second name` VARCHAR(255),
+   `adress` VARCHAR(255),
+   `emal` VARCHAR(255),
+   `password` VARCHAR(255),
+   `image` BIT,
+   PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `Product` (
+   `id` INT AUTO_INCREMENT,
+   `description` VARCHAR(255),
+   `image` BIT,
+   `price` VARCHAR(255),
+   PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `Category` (
+   `id` INT AUTO_INCREMENT,
+   `id_product` INT,
+   `description` VARCHAR(255),
+   PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `Shopping_Cart` (
+   `id` INT AUTO_INCREMENT,
+   `id_product` VARCHAR(255),
+   `id_user` VARCHAR(255),
+   PRIMARY KEY (`id`)
+);
+
+
+ALTER TABLE `Category` ADD CONSTRAINT `FK_c9629308-6db1-4f26-8099-9dadb374d6b9` FOREIGN KEY (`id_product`) REFERENCES `Product`(`id`)  ;
+
+ALTER TABLE `Shopping_Cart` ADD CONSTRAINT `FK_70506bba-a305-4d76-801c-05ecfdb5a6af` FOREIGN KEY (`id_product`) REFERENCES `Product`(`id`)  ;
+
+ALTER TABLE `Shopping_Cart` ADD CONSTRAINT `FK_614c39c3-bcb0-469c-b96d-3abd962fd570` FOREIGN KEY (`id_user`) REFERENCES `User`(`id`)  ;

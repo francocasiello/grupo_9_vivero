@@ -168,7 +168,6 @@ const productsController = {
   
       //res.redirect('/products');
       search: (req, res) => {
-        console.log("puto el que leeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
         db.Producto.findAll({
           where: {
             name: {[Op.Like]: "%s%"} //req.body.keyword//

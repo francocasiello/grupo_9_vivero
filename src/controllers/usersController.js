@@ -12,10 +12,12 @@ const User = require("../models/User")
 
 const bcryptjs = require("bcryptjs");
 
-const db = require("../../database/models")
+const db = require("../../database/models");
 const sequelize = db.sequelize;
 const Usuario = db.Usuario;
 const Op = db.Sequelize.Op;
+
+const { getMaxListeners } = require("process");
 
 
 
@@ -118,7 +120,6 @@ processRegister: async (req, res) => {
 
 
 profile: (req, res) => { 
-    console.log(req.cookies.userEmail);
     return res.render("userProfile", {
         user: req.session.userLogged
     })
@@ -128,7 +129,21 @@ logout: (req, res) => {
     res.clearCookie("userEmail");
     req.session.destroy();
     return res.redirect("/");
+},
+
+destroy: (req, res) => {
+    Usuario.destroy({
+      where: {
+         email: req.session.userLogged.email
+      }
+  })
+  .then (function(){
+      res.clearCookie("userEmail");
+      req.session.destroy();
+      res.redirect("/")
+ })
 }
+
 };
 
 
