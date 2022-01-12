@@ -40,7 +40,7 @@
                     <div class = "control-formulario">
                         <p>Categoría</p>
                         <div class = "control-tipoplanta">
-                        <select>
+                        <select name = "categoria_id">
                             <% categoria.forEach((categoria) => { %>
                             <option value="<%= categoria.id %>"><%= categoria.name %></option>
                             <% }) %>
@@ -53,7 +53,7 @@
         </div>
          <div class = imagenformularionuevoproducto>
              </div>
-   
+             
     </section>
     </main>
 

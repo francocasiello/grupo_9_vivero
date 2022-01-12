@@ -145,9 +145,19 @@ destroy: (req, res) => {
 },
 
 edit: (req, res) => { 
-    return res.render("editUser")
-},
-
+    Usuario.findOne({
+        where : {
+            id: req.session.userLogged.id
+          }
+    }) .then (function(userLogged){
+        console.log(userLogged)
+        return res.render("editUser", {userLogged})
+   })
+  },
+  
+editUser: (req, res) => { 
+    
+}
 
 };
 

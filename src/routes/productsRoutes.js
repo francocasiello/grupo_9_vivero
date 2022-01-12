@@ -24,11 +24,11 @@ router.get('/:id', productsController.detail);
 /*** EDIT ONE PRODUCT ***/
 router.get('/edit/:id', productsController.edit);
 /*** SUBMIT EDIT ONE PRODUCT ***/
-router.put('/:id', upload.single('image'), productsController.update);
+router.put('/edit/:id', upload.single('image'), productsController.update);
 
 /*** DELETE ONE PRODUCT***/
 router.delete('/:id', productsController.destroy);
-
+    
 
 
 

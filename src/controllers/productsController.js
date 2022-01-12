@@ -30,8 +30,8 @@ const productsController = {
     },
 
      detail: (req, res) => {
-      db.Producto.findByPk(req.params.id, //{
-      //  include: [{association: "category"}]}
+      db.Producto.findByPk(req.params.id, {
+        include: [{association: "category"}]}
       )   .then(product => {
               res.render('productDetailIndividual', {product});
           })
@@ -54,11 +54,15 @@ const productsController = {
     // res.render('productDetailIndividual', { products: requiredProduct});
     //},
 
-    edit: (req, res) => { db.Producto.findByPk(req.params.id)
+    edit: (req, res) => { db.Producto.findByPk(req.params.id,{
+      include: [{association: "category"}]})
       .then(function(product){
           res.render("editProduct", {product});
       })
   },
+
+
+
       // Solo falta autocompletar los inputs y el action y method del form
       //const requiredId = req.params.id;
       //const productToEdit = products.find((prod) => {
@@ -75,12 +79,15 @@ const productsController = {
         name: req.body.name,
         image: req.file ? req.file.filename : req.body.filename,
         price: req.body.price,
-        description: req.body.description
+        description: req.body.description,
+        categoria_id: req.body.categoria_id
     }, {
         where: { id : req.params.id}
     })
     .then (function(){
         res.redirect("/products/" + req.params.id)
+    }).catch(error => {
+      console.log(error)
     })
 },
       // Leemos el id que viene por url
@@ -134,12 +141,13 @@ const productsController = {
       //};
       // Modificar el arreglo para agregar el nuevo producto
       //const newProductList = [...products, newProduct];
-
+      console.log(req.body)
       db.Producto.create ({
         name: req.body.name,
         image: req.file ? req.file.filename : null,
         price: req.body.price,
         description: req.body.description,
+        categoria_id: req.body.categoria_id
      })
     .then (function(){
         res.redirect("/products")

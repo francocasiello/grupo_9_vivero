@@ -17,15 +17,12 @@
     <main>
     <section class = "login">
          <h2>
-            EDITAR CUENTA
+            EDITAR CUENTA DE <%=  userLogged.fullName %>
         </h2>
-          <h3>
-           Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!
-        </h3>
     </section>
     <section class = formulariologin>
         <div class = formulario>
-            <form action="/user/register" method="POST" class="formulario-registracion" enctype="multipart/form-data">
+            <form action="/user/editUser" method="POST" class="formulario-registracion" enctype="multipart/form-data">
                 <!-- <form action="/" method="GET" class="formulario-registracion">-->
                     <div class = "control-formulario">
                          <!-- <DARLE UN ESTILO PARTICULAR AL FORMULARIO EN CASO DE ERROR>-->
@@ -34,7 +31,7 @@
                         placeholder="Nombre y apellido" 
                         class="control <%= locals.errors && errors.fullName ? "is-invalid" : null %>" 
                         minlength="2"
-                        value = "<%= locals.oldData ? oldData.fullName : null  %>">
+                        value = "<%=  userLogged.fullName %>">
                         <span class="feedback"></span>
                         <% if (locals.errors && errors.fullName) { %>                        
                             <p class = errores><%= errors.fullName.msg %></p>
@@ -45,7 +42,7 @@
                         name="email" 
                         placeholder="Mail de usuario" 
                         class="control"
-                        value = "<%= locals.oldData ? oldData.email : null  %>">
+                        value = " <%= userLogged.email %> ">
                         <% if (locals.errors && errors.email) { %>                        
                             <p class = errores><%= errors.email.msg %></p>
                         <% } %>
@@ -55,14 +52,14 @@
                         <input type="date" 
                         name="birthday" 
                         class="control"
-                        value = "<%= locals.oldData ? oldData.date : null  %>">
+                        value = "<%= userLogged.birthday ? userLogged.birthday : null  %>">
                     </div>
                     <div class = "control-formulario">
                         <input type="text" 
                         name="direction" 
                         placeholder="Domicilio" 
                         class="control" 
-                        value = "<%= locals.oldData ? oldData.direction : null  %>">
+                        value = "<%= userLogged.direction ? userLogged.direction : null  %>">
                         <% if (locals.errors && errors.direction) { %>                        
                             <p class = errores><%= errors.direction.msg %></p>
                         <% } %>
@@ -96,7 +93,7 @@
                             <p class = errores><%= errors.password2.msg %></p>
                         <% } %>
                     </div> -->
-                    <button type="submit" class="boton-formulario">Crear Cuenta</button>
+                    <button type="submit" class="boton-formulario">Editá tu cuenta</button>
                     <button type="reset" class="boton-formulario">Borrar</button>
                 </form>
         </div>
