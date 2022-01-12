@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <!-- head-->
-    <%- include("./partials/head.ejs", { tituloPagina: "Detalle de producto"}) %>
+    <%- include("./partials/head.ejs", { tituloPagina: "Productos"}) %>
 <body>
      <!-- header-->
      <%- include("./partials/header.ejs") %>
@@ -14,9 +14,9 @@
                 <a href="/products/<%= prod.id %>"><img src = "/images/products/<%= prod.image %>" class= "producto1"></a>
             </div>
             <div class = datosproducto>
-                <a href="/products/<%= prod.id %>"> <h2 class = tituloproducto>
+                <h2 class = tituloproducto>
                         <%= prod.name %>
-                    </h2></a>
+                    </h2>
                     <a href="/products/<%= prod.id %>"> <h5> MAS INFORMACIÓN </h5> </a>
                      <div class = cantidad>
                          <div>
