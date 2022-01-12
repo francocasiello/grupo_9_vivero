@@ -175,6 +175,21 @@ ul li {
 
 /****main*****/
 
+.searchFail {
+   font-size: 50%;
+   height: 100vh;
+}
+
+.searchFail h2 {
+    width: 80%;
+    text-transform: uppercase;
+    color: rgba(43, 179, 122, 0.95);
+    text-shadow: none;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+}
+
 .logo2 {
     display: none;
 }

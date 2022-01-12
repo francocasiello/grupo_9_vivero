@@ -7,6 +7,13 @@
      <%- include("./partials/header.ejs") %>
      
       <main>
+        <% if (productos.length <= 0) { %>                        
+            <div class = searchFail>
+            <h2>
+                ¡Lamentablemente no encontramos lo que estas buscando!
+            </h2>
+         </div>
+        <% }  else { %>
         <% productos.forEach((prod) => { %>
             <div class = seccionproducto>
                 
@@ -43,6 +50,7 @@
         </div>
   
         <% }) %>
+        <% } %>
     </main>
 
 
