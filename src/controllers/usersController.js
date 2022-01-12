@@ -142,7 +142,12 @@ destroy: (req, res) => {
       req.session.destroy();
       res.redirect("/")
  })
-}
+},
+
+edit: (req, res) => { 
+    return res.render("editUser")
+},
+
 
 };
 

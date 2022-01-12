@@ -75,4 +75,10 @@ router.get("/logout", usersController.logout);
 router.get("/destroy", usersController.destroy);
 
 
+/*** EDIT USER ***/
+router.get("/edit/:id", usersController.edit);
+/*** SUBMIT EDIT USER ***/
+//router.put('/:id', upload.single('image'), usersController.update);
+
+
 module.exports = router;
