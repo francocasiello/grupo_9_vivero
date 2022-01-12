@@ -7,12 +7,24 @@
      <%- include("./partials/header.ejs") %>
      
       <main>
-        <% if (productos.length <= 0) { %>                        
+        <% if (productos.length <= 0) { %>
+            <!--<div>
+            <img src = "../public/images/sadplant.png">
+            </div> -->     
             <div class = searchFail>
             <h2>
-                ¡Lamentablemente no encontramos lo que estas buscando!
+            <% if (locals.isLogged) {%>
+                    ¡Lamentablemente no encontramos lo que estas buscando <%= user.fullName %>!
+                <% } else {%>
+                    ¡Lamentablemente no encontramos lo que estas buscando !
+                <% } %>
+                <br>
+                ¡Pero queremos ayudarte! <br>
+                Comunicate con nosotros por whatsapp haciendo clic <a href = "#"> aquí </a> para poder asesorarte personalmente. 
             </h2>
-         </div>
+            </div>    
+            
+       
         <% }  else { %>
         <% productos.forEach((prod) => { %>
             <div class = seccionproducto>

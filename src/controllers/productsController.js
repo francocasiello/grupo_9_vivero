@@ -182,11 +182,12 @@ const productsController = {
             name: {[Op.substring]: req.query.keywords } 
           }
         }).then(productos => {
-                res.render("search", {productos});
+                res.render("search", {productos, user: req.session.userLogged});
             }).catch(error => {
               console.log(error)
             })
         },
+        
        
 };
 

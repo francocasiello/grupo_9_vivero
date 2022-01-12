@@ -153,6 +153,17 @@ h2 .profileName {
         width: 40px;
        }
 
+.search {
+        background-color: #227150;
+        color: white;
+        width: 40px;
+        display: flex;
+        border: 0;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: stretch;
+}
+
 .barra-titulo {  
         display: none;
         max-width: 1200px;
@@ -182,8 +193,27 @@ ul li {
 
 .searchFail h2 {
     width: 80%;
-    text-transform: uppercase;
     color: rgba(43, 179, 122, 0.95);
+    text-shadow: none;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.searchFail h2 a{
+    font-size: 1em;
+    width: 80%;
+    color: rgba(43, 179, 122, 0.95);
+    text-shadow: none;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.searchFail h2 a:hover{
+    font-size: 1em;
+    width: 80%;
+    color: rgba(31, 124, 85, 0.95);
     text-shadow: none;
     text-align: center;
     margin: auto;
