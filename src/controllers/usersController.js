@@ -151,6 +151,16 @@ edit: (req, res) => {
           }
     }) .then (function(userLogged){
         console.log(userLogged)
+        let date = userLogged.birthday.getDate() + 1;
+        let month = userLogged.birthday.getMonth() + 1;
+        let year = userLogged.birthday.getFullYear();
+        if (date < 10){
+            date = '0' + date;
+        }
+        if (month < 10){
+            month = '0' + month;
+        }
+        userLogged.custom_birthday = year + '-' + month + '-' + date;
         return res.render("editUser", {userLogged})
    }).catch(error => {
     console.log(error)
