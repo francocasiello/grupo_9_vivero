@@ -158,10 +158,10 @@ edit: (req, res) => {
   },
   
 editUser: (req, res) => {
-        db.Usuario.update ({
-          fullName: req.body.name,
+        Usuario.update ({
+          fullName: req.body.fullName,
           email: req.body.email,
-          password: req.body.password,
+          password: bcryptjs.hashSync(req.body.password, 10),
           birthday: req.body.birthday,
           direction: req.body.direction,
           avatar: req.file ? req.file.avatar : req.body.avatar,
@@ -170,7 +170,9 @@ editUser: (req, res) => {
           where: { id : req.session.userLogged.id}
       })
       .then (function(){
-          res.redirect("/user/profile" + req.params.id)
+         res.clearCookie("userEmail");
+        req.session.destroy();
+          res.redirect("/user/login")
       }).catch(error => {
         console.log(error)
       })

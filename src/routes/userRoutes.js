@@ -79,8 +79,9 @@ router.get("/destroy", usersController.destroy);
 
 /*** EDIT USER ***/
 router.get("/edit/:id", usersController.edit);
+
 /*** SUBMIT EDIT USER ***/
-//router.put('/:id', upload.single('avatar'), usersController.update);
+router.put('/editUser/:id', upload.single('avatar'), usersController.editUser);
 
 
 module.exports = router;
