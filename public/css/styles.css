@@ -184,6 +184,14 @@ ul li {
     display: none;
 }
 
+.imageError {
+    display: flex;
+    height: 200px;
+    margin-top: 40px;
+    margin: auto
+}
+
+
 /****main*****/
 
 .searchFail {
