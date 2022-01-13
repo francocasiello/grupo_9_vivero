@@ -4,6 +4,8 @@ const path = require('path');
 
 const usersController = require('../controllers/usersController');
 
+const upload = require('../middlewares/upload');
+
 //****express-valditor *////
 const {body} = require("express-validator");
 
@@ -78,7 +80,7 @@ router.get("/destroy", usersController.destroy);
 /*** EDIT USER ***/
 router.get("/edit/:id", usersController.edit);
 /*** SUBMIT EDIT USER ***/
-//router.put('/:id', upload.single('image'), usersController.update);
+//router.put('/:id', upload.single('avatar'), usersController.update);
 
 
 module.exports = router;
