@@ -22,7 +22,7 @@
     </section>
     <section class = formulariologin>
         <div class = formulario>
-            <form action="/user/editUser" method="POST" class="formulario-registracion" enctype="multipart/form-data">
+            <form action="/user/editUser/<%= userLogged.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                 <!-- <form action="/" method="GET" class="formulario-registracion">-->
                     <div class = "control-formulario">
                          <!-- <DARLE UN ESTILO PARTICULAR AL FORMULARIO EN CASO DE ERROR>-->
@@ -31,7 +31,7 @@
                         placeholder="Nombre y apellido" 
                         class="control <%= locals.errors && errors.fullName ? "is-invalid" : null %>" 
                         minlength="2"
-                        value = "<%=  userLogged.fullName %>">
+                        value = "<%= userLogged.fullName %>">
                         <span class="feedback"></span>
                         <% if (locals.errors && errors.fullName) { %>                        
                             <p class = errores><%= errors.fullName.msg %></p>
@@ -47,13 +47,13 @@
                             <p class = errores><%= errors.email.msg %></p>
                         <% } %>
                     </div>
-                    <div class = "control-formulario">
+                    <!-- <div class = "control-formulario">
                         <label>Fecha de nacimiento:</label>
                         <input type="date" 
                         name="birthday" 
                         class="control"
                         value = "<%= userLogged.birthday ? userLogged.birthday : null  %>">
-                    </div>
+                    </div>-->
                     <div class = "control-formulario">
                         <input type="text" 
                         name="direction" 
