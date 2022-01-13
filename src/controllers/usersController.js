@@ -3,7 +3,6 @@ const app = express();
 const path = require("path")
 const fs = require('fs');
 
-
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
 const {validationResult} = require("express-validator");

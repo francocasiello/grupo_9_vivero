@@ -19,14 +19,10 @@ const mainController = {
             user: req.session.userLogged
         });
     },
-   
     login: (req, res) => { return res.render("login")},
     productCart: (req, res) => { return res.render("productCart")},
     register: (req, res) => { return res.render("register")},
-    
-};
-
-
+    };
 
 // Acá exportamos el resultado
 module.exports= mainController

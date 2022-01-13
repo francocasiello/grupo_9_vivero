@@ -1,19 +1,16 @@
-// Acá nos falta express y el router
+// EXPRESS Y ROUTER
 const express = require('express');
 const router = express.Router();
 
-// Aća nos falta traer el controller
-
+// CONTROLADOR
 const mainController = require("../controllers/mainController");
 
-// Acá definimos las rutas
+// RUTAS
 router.get('/', mainController.index);
 router.get("/productCart", mainController.productCart);
 router.get("/index", mainController.index);
 
 
-// Acá exportamos el resultado
-
+// EXPORTAMOS RESULTADO
 module.exports = router;
 
-//

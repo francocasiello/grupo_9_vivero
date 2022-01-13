@@ -33,7 +33,6 @@
                         name="fullName" 
                         placeholder="Nombre y apellido" 
                         class="control <%= locals.errors && errors.fullName ? "is-invalid" : null %>" 
-                        minlength="2"
                         value = "<%= locals.oldData ? oldData.fullName : null  %>">
                         <span class="feedback"></span>
                         <% if (locals.errors && errors.fullName) { %>                        

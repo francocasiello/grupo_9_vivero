@@ -1,14 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-
 const usersController = require('../controllers/usersController');
-
 const upload = require('../middlewares/upload');
-
-//****express-valditor *////
-const {body} = require("express-validator");
-
 
 //***** MULTER **** */// Para guardar imagenes
 const multer = require("multer");
@@ -29,29 +23,8 @@ const uploadFile= multer({storage});
 
 
 ///**** VALIDACIONES ****////
-const validations = [
-    body("fullName").notEmpty().withMessage("El nombre debe estar completo"),
-    body("email").notEmpty().withMessage("Tienes que escribir un correo electrónico válido").bail()
-    .isEmail().withMessage("Desbes escribir un correo electrónico válido"),
-    body("password").notEmpty().withMessage("Tienes que escribir una contraseña"),
-    body("direction").notEmpty().withMessage("Tu dirección es obligatoria!"),
-    body("avatar").custom((value, {req})=> {
-      let file = req.file;
-      let acceptedExtensions = [".jgp", ".png", ".gif", ".jpeg"];
-      
-      if (!file) {
-        throw new Error("Debes subir una imagen");
-      } //else { 
-        //let fileExtension = path.extname(file.originalname);
-        //if (!acceptedExtensions.includes(fileExtension)) {
-        //throw new Error(`Las extenciones de archivos permitidas son ${acceptedExtensions.join(", ")}`);
-      //}
-    //}
-      return true;
-    })
-]
-
-// MIDDLEWARES
+const userValidations = require("../middlewares/userValidations")
+///**** MIDDLEWARES  ****//// 
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
 
@@ -66,9 +39,9 @@ router.post("/login", usersController.loginProcess);
 
 router.get("/register", guestMiddleware, usersController.register);
 
-router.post("/register", uploadFile.single("avatar"), validations, usersController.processRegister);
+router.post("/register", uploadFile.single("avatar"), userValidations, usersController.processRegister);
 
-router.get("/profile", authMiddleware, usersController.profile);
+router.get("/profile", authMiddleware, userValidations, usersController.profile);
 
 // LOGOUT
 router.get("/logout", usersController.logout);

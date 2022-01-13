@@ -141,8 +141,7 @@ const productsController = {
       //};
       // Modificar el arreglo para agregar el nuevo producto
       //const newProductList = [...products, newProduct];
-      console.log(req.body)
-      db.Producto.create ({
+        db.Producto.create ({
         name: req.body.name,
         image: req.file ? req.file.filename : null,
         price: req.body.price,
@@ -169,8 +168,7 @@ const productsController = {
         where: {
             id: req.params.id
         }
-    })
-    .then (function(){
+    }).then (function(){
         res.redirect("/products")
     })
 },
@@ -198,8 +196,6 @@ const productsController = {
         
        
 };
-
-
 
 
 module.exports = productsController;
