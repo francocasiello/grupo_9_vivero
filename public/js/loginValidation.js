@@ -1,6 +1,6 @@
 window.onload = function(){
-    let fullName = document.querySelector('#fullName')
-    fullName.focus()
+    let fullName = document.querySelector('#email')
+    email.focus()
     
     let formulario = document.querySelector('#formulario');
     
@@ -8,16 +8,6 @@ window.onload = function(){
     formulario.addEventListener("submit", function (event) {
     let errores = [];
     
-    if(fullName.value == ""){
-     errores.push("El campo nombre no puede estar vacío");
-     fullName.classList.add("is-invalid")
-     } else if (fullName.value.length < 3) {
-        errores.push("El campo nombre debe contener al menos tres caracteres");
-        fullName.classList.add("is-invalid")
-     } else {
-        fullName.classList.add("is-valid") 
-     }
-
     let email = document.querySelector('#email')
     if(email.value == ""){
         errores.push("El campo email no puede estar vacío");
@@ -26,37 +16,16 @@ window.onload = function(){
          email.classList.add("is-valid") 
        }
 
-    let avatar = document.querySelector('#avatar')
-    if(avatar.value == ""){
-        errores.push("Debes elegir una foto");
-        avatar.classList.add("is-invalid")
-    } else {
-        avatar.classList.add("is-valid") 
-      } 
-
     let password = document.querySelector('#password')
     if(password.value == ""){
         errores.push("El campo contraseña no puede estar vacío");
         password.classList.add("is-invalid")
-    } else if (password.value.length < 8) {
+    } else if (password.value.length < 1) {
         errores.push("El campo contraseña debe contener al menos ocho caracteres");
         password.classList.add("is-invalid")
      } else {
         password.classList.add("is-valid") 
      }
-
-     
-    let direction = document.querySelector('#direction')
-    if(direction.value != ""){
-        direction.classList.add("is-valid") 
-     }
-
-     let birthday = document.querySelector('#birthday')
-     if(birthday.value != ""){
-        birthday.classList.add("is-valid") 
-      }
-    
-   
 
 
     if(errores.length > 0){
@@ -69,7 +38,7 @@ window.onload = function(){
         
         }
     } else {
-        alert("Registrando")
+        alert("Ingresando")
     }
 
 })

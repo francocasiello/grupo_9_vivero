@@ -11,10 +11,10 @@ const productsValidations = require("../middlewares/productsValidations")
 router.get('/', productsController.index);
 
 /*** CREATE ONE PRODUCT ***/
-router.get('/create', productsValidations, productsController.create);
+router.get('/create', productsController.create);
 
 /*** SUBMIT CREATE ONE PRODUCT ***/
-router.post('/', upload.single('image'), productsValidations, productsController.store);
+router.post('/', productsValidations, upload.single('image'), productsController.store);
 
 /*** BUSCAR ONE PRODUCT***/
 router.get('/search', productsController.search);

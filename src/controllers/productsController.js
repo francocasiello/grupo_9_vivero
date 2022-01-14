@@ -58,12 +58,23 @@ const productsController = {
     // res.render('productDetailIndividual', { products: requiredProduct});
     //},
 
-    edit: (req, res) => { db.Producto.findByPk(req.params.id,{
-      include: [{association: "category"}]})
-      .then(function(product){
-          res.render("editProduct", {product});
-      })
-  },
+   // edit: (req, res) => { db.Producto.findByPk(req.params.id,{
+   //   include: [{association: "category"}]})
+   //   .then(function(product){
+   //       res.render("editProduct", {product});
+   //   })
+  //},
+
+  edit: function (req, res) {
+    let promCategorys = db.Category.findAll();
+    let promProducts = db.Producto.findByPk(req.params.id);
+    
+    Promise
+    .all([promCategorys, promProducts])
+    .then(([allCategorys, product]) => {
+        return res.render("editProduct", {allCategorys,product})})
+    .catch(error => res.send(error))
+},
 
 
 
@@ -131,15 +142,15 @@ const productsController = {
      // res.render('newProduct');
     },
 
-    store: function (req, res) {
+    store: async (req, res) => {
       const resultValidation = validationResult(req);
       //return res.send(resultValidation.errors.length);
-      //if (resultValidation.errors.length > 0) {
-      //    return res.render ("newProduct", {
-      //        errors: resultValidation.mapped(),
-      //        oldData: req.body
-      //   });
-      //} 
+      if (resultValidation.errors.length > 0) {
+          return res.render ("newProduct", {
+              errors: resultValidation.mapped(),
+              oldData: req.body
+         });
+      } 
       // ✓ Acceder a nuestro archivo JSON
       // ✓ Leer los datos y convertirlos en un array para modificarlo
       // Leer los datos que vienen en la request (req.body)
@@ -153,7 +164,7 @@ const productsController = {
       //};
       // Modificar el arreglo para agregar el nuevo producto
       //const newProductList = [...products, newProduct];
-        db.Producto.create ({
+      db.Producto.create ({
         name: req.body.name,
         image: req.file ? req.file.filename : null,
         price: req.body.price,
@@ -163,6 +174,7 @@ const productsController = {
     .then (function(){
         res.redirect("/products")
     })
+  
 },
   
       // Escribir en el JSON el nuevo arreglo actualizado

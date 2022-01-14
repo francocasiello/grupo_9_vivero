@@ -20,20 +20,23 @@
            Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!
         </h3>
     </section>
-    <section class = formulariologin>
+    <section class = formulariologin id= "formulario">
         <div class = formulario>
                 <!-- FORMULARIO -->
                 <!--<form action="/crear-producto" method="POST" class="formulario-registracion">-->
                 <form action="/user/login" method="POST" class="formulario-registracion">
                 <div class = "control-formulario">
-                    <input type="text" name="email" placeholder="Email" class="control">   <!-- minlength="2" required-->
+                    <div class = "errores alert-warning">
+                        <ul class = errorsList1> </ul>
+                        </div>
+                    <input type="text" name="email" placeholder="Email" class="control" id = "email">   <!-- minlength="2" required-->
                     <span class="feedback"></span>
                     <% if (locals.errors && errors.email) { %>                        
                         <p class = errores><%= errors.email.msg %></p>
                     <% } %>
                 </div>
                 <div class = "control-formulario">
-                    <input type="password" name ="password"  placeholder= "Contraseña" class ="control">
+                    <input type="password" name ="password"  placeholder= "Contraseña" class ="control" id = "password">
                     <% if (locals.errors && errors.password) { %>                        
                         <p class = errores><%= errors.password.msg %></p>
                     <% } %>
@@ -55,5 +58,6 @@
 
     <!-- footer-->
     <%- include("./partials/footer.ejs") %>
+    <script src="/js/loginValidation.js"></script>
   </body>
 </html>

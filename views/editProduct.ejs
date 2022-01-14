@@ -39,10 +39,11 @@
                     <div class = "control-formulario">
                         <p>Categoría</p>
                         <div class = "control-tipoplanta">
-                        <select name = "categoria_id">
-                            <option value="<%= product.categoria_id %>"><%= product.category.name %></option>
-
-                        </select>
+                            <select name = "categoria_id">
+                                <% allCategorys.forEach((categoria) => { %>
+                                <option value="<%= categoria.id %>"><%= categoria.name %></option>
+                                <% }) %>
+                            </select>
                      </div>
                      </div>
                     <button type="submit" class="boton-formulario">Modificar</button>

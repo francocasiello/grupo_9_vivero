@@ -59,6 +59,7 @@
                         <input type="date" 
                         name="birthday" 
                         class="control"
+                        id="birthday"
                         value = "<%= locals.oldData ? oldData.date : null  %>">
                     </div>
                     <div class = "control-formulario">
@@ -66,6 +67,7 @@
                         name="direction" 
                         placeholder="Domicilio" 
                         class="control" 
+                        id="direction"
                         value = "<%= locals.oldData ? oldData.direction : null  %>">
                         <% if (locals.errors && errors.direction) { %>                        
                             <p class = errores><%= errors.direction.msg %></p>
