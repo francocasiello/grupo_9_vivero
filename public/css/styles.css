@@ -36,7 +36,6 @@
 .link:hover {
     font-weight:900;
     font-size: 1.1rem;
-
 }
 
 .errores {
@@ -191,6 +190,40 @@ ul li {
     margin: auto
 }
 
+
+/****** VALIDACIONES JS FRONT *****/
+
+.is-invalid{
+    box-shadow: 0px 4px 4px rgb(201, 122, 116);
+    border: red;
+    background-color: rgb(216, 179, 177);
+}
+
+.is-valid{
+    box-shadow: 0px 4px 4px rgb(201, 122, 116);
+    border: red;
+    background-color: rgb(148, 240, 130);
+}
+
+
+.errorsList1 {
+    color: white;
+    font-size: 0px;
+}
+
+.errorsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(201, 122, 116);
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    border-radius: 5%;
+    padding: 20px;
+    text-align: center;
+    font-size: 200px;
+    transition: all 3000ms;
+}
 
 /****main*****/
 

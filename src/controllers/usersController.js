@@ -21,7 +21,7 @@ const { getMaxListeners } = require("process");
 
 
 const usersController = {
-login: (req, res) => { 
+login: (req, res) => {     
     return res.render("login")
 },
 
@@ -36,6 +36,7 @@ login: (req, res) => {
 //    })
 
 loginProcess: (req, res ) => {
+
     let userToLogin = Usuario.findOne({
               where : {
                   email: req.body.email
@@ -69,10 +70,9 @@ loginProcess: (req, res ) => {
                       }
                   }
               })
-              console.log(resultado); 
           })
     //User.findByField("email", req.body.email);
-    //console.log(userToLogin)
+    //console.log(oldData)
     
 },
 

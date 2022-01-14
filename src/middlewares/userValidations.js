@@ -7,7 +7,6 @@ const userValidations = [
     body("email").notEmpty().withMessage("Tienes que escribir un correo electrónico válido").bail()
     .isEmail().withMessage("Desbes escribir un correo electrónico válido"),
     body("password").notEmpty().withMessage("Tienes que escribir una contraseña").bail().isLength({min: 8}).withMessage("La contraseña debe tener al menos ocho caracteres"),
-    body("direction").notEmpty().withMessage("Tu dirección es obligatoria!"),
     body("avatar").custom((value, {req})=> {
       let file = req.file;
       let acceptedExtensions = [".jgp", ".png", ".gif", ".jpeg"];

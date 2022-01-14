@@ -4,6 +4,10 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const express = require("express");
+const app = express();
+const {validationResult} = require("express-validator");
+
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
 const db = require("../../database/models")
@@ -128,6 +132,14 @@ const productsController = {
     },
 
     store: function (req, res) {
+      const resultValidation = validationResult(req);
+      //return res.send(resultValidation.errors.length);
+      //if (resultValidation.errors.length > 0) {
+      //    return res.render ("newProduct", {
+      //        errors: resultValidation.mapped(),
+      //        oldData: req.body
+      //   });
+      //} 
       // ✓ Acceder a nuestro archivo JSON
       // ✓ Leer los datos y convertirlos en un array para modificarlo
       // Leer los datos que vienen en la request (req.body)

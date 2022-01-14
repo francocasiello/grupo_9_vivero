@@ -11,7 +11,7 @@
         <% for( let oneError in errors) { %>
         <% } %>
     <% } %>
-
+   
 
 
     <main>
@@ -23,17 +23,21 @@
            Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!
         </h3>
     </section>
-    <section class = formulariologin>
+    <section class = formulariologin id= "formulario">
         <div class = formulario>
             <form action="/user/register" method="POST" class="formulario-registracion" enctype="multipart/form-data">
                 <!-- <form action="/" method="GET" class="formulario-registracion">-->
                     <div class = "control-formulario">
+                        <div class = "errores alert-warning">
+                            <ul class = errorsList1> </ul>
+                            </div>
                          <!-- <DARLE UN ESTILO PARTICULAR AL FORMULARIO EN CASO DE ERROR>-->
                         <input type="text" 
                         name="fullName" 
                         placeholder="Nombre y apellido" 
                         class="control <%= locals.errors && errors.fullName ? "is-invalid" : null %>" 
-                        value = "<%= locals.oldData ? oldData.fullName : null  %>">
+                        value = "<%= locals.oldData ? oldData.fullName : null  %>"
+                        id = "fullName">
                         <span class="feedback"></span>
                         <% if (locals.errors && errors.fullName) { %>                        
                             <p class = errores><%= errors.fullName.msg %></p>
@@ -44,6 +48,7 @@
                         name="email" 
                         placeholder="Mail de usuario" 
                         class="control"
+                        id = "email"
                         value = "<%= locals.oldData ? oldData.email : null  %>">
                         <% if (locals.errors && errors.email) { %>                        
                             <p class = errores><%= errors.email.msg %></p>
@@ -70,7 +75,7 @@
                         <label>Subir imagen:</label></div>
                         <div class = "control-formulario"> 
                             <label class= boton-formulario  style = "color: white" for = "avatar">Elegi tu foto</label>
-                            <input type="file" name ="avatar" id = "avatar" accept=".jpg " multiple>
+                            <input type="file" name ="avatar" id = "avatar" accept=".jpg " multiple id = "avatar">
                             <% if (locals.errors && errors.avatar) { %>                        
                                 <p class = errores><%= errors.avatar.msg %></p>
                             <% } %>
@@ -80,7 +85,8 @@
                         <input type="password" 
                         name ="password" 
                         class ="control" 
-                        required>
+                        id = "password"
+                        >
                         <% if (locals.errors && errors.password) { %>                        
                             <p class = errores><%= errors.password.msg %></p>
                         <% } %>
@@ -107,5 +113,6 @@
 
        <!-- footer-->
        <%- include("./partials/footer.ejs") %>
+  <script src="/js/newUserValidation.js"></script>
   </body>
 </html>
