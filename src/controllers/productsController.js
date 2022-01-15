@@ -146,11 +146,16 @@ const productsController = {
       const resultValidation = validationResult(req);
       //return res.send(resultValidation.errors.length);
       if (resultValidation.errors.length > 0) {
+        db.Category.findAll()
+        .then(categoria => {
           return res.render ("newProduct", {
               errors: resultValidation.mapped(),
-              oldData: req.body
+              oldData: req.body,
+              categoria : categoria
          });
-      } 
+      });
+    }
+    
       // ✓ Acceder a nuestro archivo JSON
       // ✓ Leer los datos y convertirlos en un array para modificarlo
       // Leer los datos que vienen en la request (req.body)

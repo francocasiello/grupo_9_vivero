@@ -1,4 +1,5 @@
 //****express-valditor *////
+const path = require("path")
 const {body} = require("express-validator");
 
 ///**** VALIDACIONES ****////
@@ -9,16 +10,15 @@ const userValidations = [
     body("password").notEmpty().withMessage("Tienes que escribir una contraseña").bail().isLength({min: 8}).withMessage("La contraseña debe tener al menos ocho caracteres"),
     body("avatar").custom((value, {req})=> {
       let file = req.file;
-      let acceptedExtensions = [".jgp", ".png", ".gif", ".jpeg"];
-      
+      let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"];
       if (!file) {
         throw new Error("Debes subir una imagen");
-      } //else { 
-        //let fileExtension = path.extname(file.originalname);
-        //if (!acceptedExtensions.includes(fileExtension)) {
-        //throw new Error(`Las extenciones de archivos permitidas son ${acceptedExtensions.join(", ")}`);
-      //}
-    //}
+      } else { 
+        let fileExtension = path.extname(file.originalname);
+        if (!acceptedExtensions.includes(fileExtension.toLowerCase())) {
+        throw new Error(`Las extenciones de archivos permitidas son ${acceptedExtensions.join(", ")}`);
+      }
+    }
       return true;
     })
 ]

@@ -34,7 +34,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 router.get("/login", guestMiddleware, usersController.login);
 
 // PROCESAR EL LOGIN
-router.post("/login", usersController.loginProcess);
+router.post("/login", userValidations, usersController.loginProcess);
 
 
 router.get("/register", guestMiddleware, usersController.register);
@@ -51,10 +51,10 @@ router.get("/destroy", usersController.destroy);
 
 
 /*** EDIT USER ***/
-router.get("/edit/:id", usersController.edit);
+router.get("/edit/:id", userValidations, usersController.edit);
 
 /*** SUBMIT EDIT USER ***/
-router.put('/editUser/:id', upload.single('avatar'), usersController.editUser);
+router.put('/editUser/:id', userValidations, upload.single('avatar'), usersController.editUser);
 
 
 module.exports = router;

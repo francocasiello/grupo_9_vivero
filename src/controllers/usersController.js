@@ -80,7 +80,7 @@ register: (req, res) => {
     return res.render("register")
 },
 
-processRegister: async (req, res) => { 
+processRegister: (req, res) => { 
     const resultValidation = validationResult(req);
     //return res.send(resultValidation.errors.length);
     if (resultValidation.errors.length > 0) {
@@ -94,7 +94,7 @@ processRegister: async (req, res) => {
         where : {
             email: req.body.email
           }
-      }).then((userInDB) => {
+      }).then(async(userInDB) => {
         if (userInDB) {
             return res.render ("register", {
                 errors: {
@@ -105,16 +105,17 @@ processRegister: async (req, res) => {
                 oldData: req.body
            });
         }
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: req.file.filename
+        }
+    
+        let userCreated = await User.create(userToCreate);
+        return res.redirect("/user/login")
+
       }) 
 
-    let userToCreate = {
-        ...req.body,
-        password: bcryptjs.hashSync(req.body.password, 10),
-        avatar: req.file.filename
-    }
-
-    let userCreated = await User.create(userToCreate);
-    return res.redirect("/user/login")
 },
 
 

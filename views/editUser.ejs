@@ -20,17 +20,20 @@
             EDITAR CUENTA DE <%=  userLogged.fullName %>
         </h2>
     </section>
-    <section class = formulariologin>
+    <section class = formulariologin  id= "formulario">
         <div class = formulario>
             <form action="/user/editUser/<%= userLogged.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                 <!-- <form action="/" method="GET" class="formulario-registracion">-->
                     <div class = "control-formulario">
+                        <div class = "errores alert-warning">
+                            <ul class = errorsList1> aaa </ul>
+                            </div>
                          <!-- <DARLE UN ESTILO PARTICULAR AL FORMULARIO EN CASO DE ERROR>-->
                         <input type="text" 
                         name="fullName" 
                         placeholder="Nombre y apellido" 
                         class="control <%= locals.errors && errors.fullName ? "is-invalid" : null %>" 
-                        minlength="2"
+                        id = "fullName"
                         value = "<%= userLogged.fullName %>">
                         <span class="feedback"></span>
                         <% if (locals.errors && errors.fullName) { %>                        
@@ -42,6 +45,7 @@
                         name="email" 
                         placeholder="Mail de usuario" 
                         class="control"
+                        id = "email"
                         value = " <%= userLogged.email %> ">
                         <% if (locals.errors && errors.email) { %>                        
                             <p class = errores><%= errors.email.msg %></p>
@@ -66,7 +70,7 @@
                         <% } %>
                     </div>
                     <div class = "control-formulario">
-                        <img class="profilePicture" src="/images/avatars/<%= userLogged.avatar %>" alt="Tu imagen de perfil">
+                        <img class="profilePicture" src="/images/avatars/<%= userLogged.avatar %>" alt="Tu imagen de perfil" id = "image">
                         <label> Cambiar imagen:</label></div>
                         <div class = "control-formulario"> 
                             <label class= boton-formulario  style = "color: white" for = "avatar">Elegi tu foto</label>
@@ -80,7 +84,7 @@
                         <input type="password" 
                         name ="password" 
                         class ="control" 
-                        required>
+                        id = "password">
                         <% if (locals.errors && errors.password) { %>                        
                             <p class = errores><%= errors.password.msg %></p>
                         <% } %>
@@ -106,6 +110,8 @@
 
 
        <!-- footer-->
+     
        <%- include("./partials/footer.ejs") %>
+       <script src="/js/newUserValidation.js"></script>
   </body>
 </html>

@@ -18,11 +18,23 @@ window.onload = function(){
         fullName.classList.add("is-valid") 
      }
 
+     const validateEmail = (email) => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      };
+
+      
     let email = document.querySelector('#email')
     if(email.value == ""){
         errores.push("El campo email no puede estar vacío");
         email.classList.add("is-invalid");
-       } else {
+       } else if (!validateEmail(email.value)) {
+        errores.push("El email debe ser un email válido");
+        email.classList.add("is-invalid");
+       } else { 
          email.classList.add("is-valid") 
        }
 
@@ -66,12 +78,7 @@ window.onload = function(){
         ulErrores.innerHTML = "";
         for (let i = 0; i < errores.length; i++) {
             ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-        
         }
-    } else {
-        alert("Registrando")
-    }
-
+    } 
 })
-
 }
