@@ -1,5 +1,5 @@
 window.onload = function(){
-    let fullName = document.querySelector('#email')
+    let email = document.querySelector('#email')
     email.focus()
     
     let formulario = document.querySelector('#formulario');
@@ -37,9 +37,7 @@ window.onload = function(){
             ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
         
         }
-    } else {
-        alert("Ingresando")
-    }
+    } 
 
 })
 

@@ -76,7 +76,7 @@
                     <div class = "control-formulario">
                         <label>Subir imagen:</label></div>
                         <div class = "control-formulario"> 
-                            <label class= boton-formulario  style = "color: white" for = "avatar">Elegi tu foto</label>
+                            <label class= boton-formulario  style = "color: white" for = "avatar" id = "avatarButton">Elegi tu foto</label>
                             <input type="file" name ="avatar" id = "avatar" accept=".jpg,.jpeg,.gif,.png" id = "avatar">
                             <% if (locals.errors && errors.avatar) { %>                        
                                 <p class = errores><%= errors.avatar.msg %></p>

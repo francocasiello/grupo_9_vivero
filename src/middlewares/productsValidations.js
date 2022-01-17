@@ -1,4 +1,5 @@
 //****express-valditor *////
+const path = require("path")
 const {body} = require("express-validator");
 
 ///**** VALIDACIONES ****////
@@ -8,16 +9,15 @@ const productsValidations = [
     body("price").notEmpty().withMessage("Tienes que escribir un precio"),
     body("image").custom((value, {req})=> {
       let file = req.file;
-      let acceptedExtensions = [".jgp", ".png", ".gif", ".jpeg"];
-      
+      let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"];
       if (!file) {
         throw new Error("Debes subir una imagen");
-      } //else { 
-        //let fileExtension = path.extname(file.originalname);
-        //if (!acceptedExtensions.includes(fileExtension)) {
-        //throw new Error(`Las extenciones de archivos permitidas son ${acceptedExtensions.join(", ")}`);
-      //}
-    //}
+      } else { 
+        let fileExtension = path.extname(file.originalname);
+        if (!acceptedExtensions.includes(fileExtension.toLowerCase())) {
+        throw new Error(`Las extenciones de archivos permitidas son ${acceptedExtensions.join(", ")}`);
+      }
+    }
       return true;
     })
 ]

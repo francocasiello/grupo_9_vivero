@@ -142,7 +142,7 @@ const productsController = {
      // res.render('newProduct');
     },
 
-    store: async (req, res) => {
+    store: (req, res) => {
       const resultValidation = validationResult(req);
       //return res.send(resultValidation.errors.length);
       if (resultValidation.errors.length > 0) {

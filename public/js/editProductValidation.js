@@ -39,14 +39,6 @@ window.onload = function(){
                 price.classList.add("is-valid") 
             }
 
-
-    let image = document.querySelector('#image')
-    if(image.value == ""){
-        errores.push("Debes elegir una foto");
-        image.classList.add("is-invalid")
-    } else {
-        image.classList.add("is-valid") 
-      } 
    
 
     if(errores.length > 0){

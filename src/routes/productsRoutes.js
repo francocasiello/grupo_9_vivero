@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 const productsController = require('../controllers/productsController');
 const upload = require('../middlewares/upload');
 
@@ -23,10 +24,10 @@ router.get('/search', productsController.search);
 router.get('/:id', productsController.detail);
 
 /*** EDIT ONE PRODUCT ***/
-router.get('/edit/:id', productsController.edit);
+router.get('/edit/:id', productsValidations, productsController.edit);
 
 /*** SUBMIT EDIT ONE PRODUCT ***/
-router.put('/edit/:id', upload.single('image'), productsController.update);
+router.put('/edit/:id', productsValidations, upload.single('image'), productsController.update);
 
 /*** DELETE ONE PRODUCT***/
 router.delete('/:id', productsController.destroy);

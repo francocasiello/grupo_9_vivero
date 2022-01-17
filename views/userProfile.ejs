@@ -2,10 +2,18 @@
 <html lang="en">
     <!-- head-->
     <%- include("./partials/head.ejs", { tituloPagina: "Log in"}) %>
+    <style>
+      body {
+        background-image: url("/images/avatars/<%= user.avatar %>");
+        background-repeat: no-repeat;
+        background-attachment: center;
+        background-size:cover;
+        background-position: center center;}
+      </style>
 <body>
     <!-- header-->
     <%- include("./partials/header.ejs") %>
-
+  
     <main>
     <section class = "profile">
       <div class = "profileDates">

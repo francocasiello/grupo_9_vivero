@@ -20,9 +20,9 @@
             EDITAR CUENTA DE <%=  userLogged.fullName %>
         </h2>
     </section>
-    <section class = formulariologin  id= "formulario">
+    <section class = formulariologin>
         <div class = formulario>
-            <form action="/user/editUser/<%= userLogged.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+            <form action="/user/editUser/<%= userLogged.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id= "formulario"> 
                 <!-- <form action="/" method="GET" class="formulario-registracion">-->
                     <div class = "control-formulario">
                         <div class = "errores alert-warning">
@@ -57,6 +57,7 @@
                         <input type="date" 
                         name="birthday" 
                         class="control"
+                        id = "birthday"
                         value = "<%= userLogged.custom_birthday ? userLogged.custom_birthday : null  %>">
                     </div>
                     <div class = "control-formulario">
@@ -64,17 +65,18 @@
                         name="direction" 
                         placeholder="Domicilio" 
                         class="control" 
+                        id = "direction"
                         value = "<%= userLogged.direction ? userLogged.direction : null  %>">
                         <% if (locals.errors && errors.direction) { %>                        
                             <p class = errores><%= errors.direction.msg %></p>
                         <% } %>
                     </div>
                     <div class = "control-formulario">
-                        <img class="profilePicture" src="/images/avatars/<%= userLogged.avatar %>" alt="Tu imagen de perfil" id = "image">
+                        <img class="profilePicture" src="/images/avatars/<%= userLogged.avatar %>" alt="Tu imagen de perfil" id = "avatar">
                         <label> Cambiar imagen:</label></div>
                         <div class = "control-formulario"> 
                             <label class= boton-formulario  style = "color: white" for = "avatar">Elegi tu foto</label>
-                            <input type="file" name ="avatar" id = "avatar" accept=".jpg " multiple>
+                            <input type="file" name ="avatar" id = "avatar" accept=".jpg,.jpeg,.gif,.png">
                             <% if (locals.errors && errors.avatar) { %>                        
                                 <p class = errores><%= errors.avatar.msg %></p>
                             <% } %>

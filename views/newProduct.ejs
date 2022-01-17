@@ -25,6 +25,9 @@
             <form action="/products" method="POST" class="formulario-registracion" enctype="multipart/form-data"  id= "formularioProducto">
                 <!-- <form action="/" method="GET" class="formulario-registracion">-->
                     <div class = "control-formulario">
+                        <div class = "errores alert-warning">
+                            <ul class = errorsList1> </ul>
+                            </div>
                         <input type="text" name="name" placeholder="Nombre del Producto" class="control" id ="name">
                         <span class="feedback"></span>
                         <% if (locals.errors && errors.name) { %>                        
@@ -32,18 +35,27 @@
                         <% } %>
                     </div>
                     <div class = "control-formulario">
-                        <input type="text" name="description" placeholder="Descripción" class="control">
+                        <input type="text" name="description" placeholder="Descripción" class="control" id = "description">
+                        <% if (locals.errors && errors.description) { %>                        
+                            <p class = errores><%= errors.description.msg %></p>
+                        <% } %>
                     </div>
 
                     <div class = "control-formulario">
                     <label>Subir imagen:</label></div>
                     <div class = "control-formulario"> 
                         <label class= boton-formulario  style = "color: white" for = "image">Elegi tu foto</label>
-                        <input type="file" name ="image" id = "image" accept=".jpg " multiple>
+                        <input type="file" name ="image" id = "image" accept=".jpg,.jpeg,.gif,.png" id = "image">
+                        <% if (locals.errors && errors.image) { %>                        
+                            <p class = errores><%= errors.image.msg %></p>
+                        <% } %>
                      </div>
 
                      <div class = "control-formulario">
-                        <input type="number" name="price" placeholder="Precio" class="control">
+                        <input type="number" name="price" placeholder="Precio" class="control" id ="price">
+                        <% if (locals.errors && errors.price) { %>                        
+                            <p class = errores><%= errors.price.msg %></p>
+                        <% } %>
                     </div>
                     <div class = "control-formulario">
                         <p>Categoría</p>

@@ -6,6 +6,11 @@
      <!-- header-->
      <%- include("./partials/header.ejs") %>
 
+     <% if (locals.errors) { %>                        
+        <% for( let oneError in errors) { %>
+        <% } %>
+     <% } %>
+
     <main>
     <section class = "login">
         <h2 class = tituloproducto>
@@ -18,23 +23,38 @@
             <img src = "/images/products/<%= product.image %>" class= "Imagen del <%= product.name %>">
         </div>
         <div class = formulario>
-            <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id= "formularioProducto">
                 <!-- <form action="/" method="GET" class="formulario-registracion">-->
                     <div class = "control-formulario">
+                        <div class = "errores alert-warning">
+                            <ul class = errorsList1> </ul>
+                            </div>
                         <input type="text" name="name" placeholder="Nombre del Producto" value="<%= product.name %>" class="control" id = "name">
                         <span class="feedback"></span>
+                        <% if (locals.errors && errors.name) { %>                        
+                            <p class = errores><%= errors.name.msg %></p>
+                        <% } %>
                     </div>
                     <div class = "control-formulario">
-                        <input type="textarea" rows="20" name="description" placeholder="Descripción" value="<%= product.description %>" class="control" >
+                        <input type="textarea" rows="20" name="description" placeholder="Descripción" value="<%= product.description %>" class="control" id = "description">
+                        <% if (locals.errors && errors.description) { %>                        
+                            <p class = errores><%= errors.description.msg %></p>
+                        <% } %>
                     </div>
                     <div class = "control-formulario">
                         <label>Subir imagen:</label></div>
                         <div class = "control-formulario"> 
                             <label class= boton-formulario  style = "color: white" for = "image">Elegi tu foto</label>
                             <input type="file" name ="image" id = "image" accept=".jpg " multiple>
+                            <% if (locals.errors && errors.image) { %>                        
+                                <p class = errores><%= errors.image.msg %></p>
+                            <% } %>
                          </div>
                     <div class = "control-formulario">
-                        <input type="number" name="price" placeholder="Precio" class="control" value="<%= product.price %>">
+                        <input type="number" name="price" placeholder="Precio" class="control" value="<%= product.price %>" id = "price">
+                        <% if (locals.errors && errors.price) { %>                        
+                            <p class = errores><%= errors.price.msg %></p>
+                        <% } %>
                     </div>
                     <div class = "control-formulario">
                         <p>Categoría</p>
@@ -46,12 +66,18 @@
                             </select>
                      </div>
                      </div>
+                    <div>
+                        <div>
                     <button type="submit" class="boton-formulario">Modificar</button>
                     <button type="reset" class="boton-formulario">Resetear</button>
-                 </form>
-                 <form action="/products/<%= product.id %>?_method=DELETE" method="POST" >
+                     </form>
+                     </div>
+                     <div>
+                     <form action="/products/<%= product.id %>?_method=DELETE" method="POST" class = "formularioEliminar" >
                     <button type="submit" class="boton-eliminar">ELIMINAR</button>
                     </form>
+                     </div>
+                    </div>
             </div>
          </section>
     </main>
@@ -59,5 +85,6 @@
 
        <!-- footer-->
        <%- include("./partials/footer.ejs") %>
+      <script src="/js/editProductValidation.js"></script>
   </body>
 </html>

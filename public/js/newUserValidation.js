@@ -37,13 +37,16 @@ window.onload = function(){
        } else { 
          email.classList.add("is-valid") 
        }
+       
 
     let avatar = document.querySelector('#avatar')
+    let avatarButton = document.querySelector('#avatarButton')
+
     if(avatar.value == ""){
         errores.push("Debes elegir una foto");
-        avatar.classList.add("is-invalid")
+        avatarButton.classList.add("is-invalid-button")
     } else {
-        avatar.classList.add("is-valid") 
+      avatarButton.classList.add("is-valid-button") 
       } 
 
     let password = document.querySelector('#password')

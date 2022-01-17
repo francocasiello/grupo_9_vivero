@@ -53,12 +53,22 @@
     height: 100vh;
 }
 
+.bck {
+    background-image: url("../images/background-index.jfif");
+    background-color: #cccccc;
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode:screen;
+    height: 100vh;
+}
+
 /******header*****/
 
 header {
     display: flex;
     justify-content: space-between;
-    text-shadow: 0px 0px 10px rgb(100, 100, 100);
+    text-shadow: 0px 0px 10px rgb(189, 135, 135);
     align-items: center;
     box-shadow: 0px 0px 20px rgb(100, 100, 100);
     background-color: rgba(43, 179, 122, 0.95);
@@ -86,7 +96,7 @@ header {
 .profilePicture {
     box-shadow: 10px 4px 4px rgba(129, 127, 127, 0.397);
     max-width: 100%;
-    
+    max-height: 70vh;
 }
 
 h2 .profileName {
@@ -190,13 +200,25 @@ ul li {
     margin: auto
 }
 
-
+.formularioEliminar {
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 /****** VALIDACIONES JS FRONT *****/
 
 .is-invalid{
     box-shadow: 0px 4px 4px rgb(214, 180, 178) !important;
     border: red;
     background-color: rgb(255, 255, 255);
+}
+
+.is-invalid-button{
+    background-color: rgb(102, 19, 19) !important;
+}
+
+.is-valid-button{
+    background-color: rgb(59, 139, 34) !important;
 }
 
 .is-valid{
@@ -423,6 +445,18 @@ footer {
     height: 70vh;
     }
 
+    .imagenformulario {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-image: url("../images/login.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 70vh;
+    }
+
     .imagenformulariocuenta {
         width: 100%;
         height: 100%;
@@ -511,7 +545,7 @@ label {
 
  .boton-eliminar {
     background-color: rgba(43, 179, 122, 0.95);
-    width: 200px;
+    width: 205px;
     height: 25px;
     color: white;
     border: none;
@@ -520,7 +554,6 @@ label {
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgb(224, 231, 226);
     transition: all 400ms;
-    margin-left: -15px;
 }
 
 .boton-eliminar:hover {
@@ -635,19 +668,27 @@ margin-bottom: 15px
     padding-bottom: 20px;
     flex-direction: column;
     width: 100%;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0px 4px 4px rgb(224, 231, 226);
     transition: 1500ms all;
 }
 
 .seccionproducto:hover{
-   background-color: rgba(225, 228, 225, 0.753);
+   background-color: rgba(255, 255, 255, 0.055);
 }
 
-.seccionproducto:hover .imagenproducto img{
+.seccionproducto:hover h2{
+    color: rgb(34, 104, 62);
+    text-align: justify;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+ }
+
+ .seccionproducto:hover .imagenproducto img{
     width: 21em;
     height: 21em;
     box-shadow: 0px 0px 10px rgba(32, 6, 6, 0.301);
  }
+
 
  .seccionproducto a{
     transition: 1500ms all;;

@@ -2,7 +2,7 @@
 <html lang="en">
     <!-- head-->
     <%- include("./partials/head.ejs", { tituloPagina: "Productos"}) %>
-<body>
+    <body class = "bck">
      <!-- header-->
      <%- include("./partials/header.ejs") %>
      
@@ -14,10 +14,10 @@
                 <a href="/products/<%= prod.id %>"><img src = "/images/products/<%= prod.image %>" class= "producto1"></a>
             </div>
             <div class = datosproducto>
-                <h2 class = tituloproducto>
+                <a href="/products/<%= prod.id %>"><h2 class = tituloproducto>
                         <%= prod.name %>
-                    </h2>
-                    <a href="/products/<%= prod.id %>"> <h5> MAS INFORMACIÓN </h5> </a>
+                    </h2></a>
+                    <a href="/products/<%= prod.id %>"> <h5 class = info> MAS INFORMACIÓN </h5> </a>
                      <div class = cantidad>
                          <div>
                         <h5>
