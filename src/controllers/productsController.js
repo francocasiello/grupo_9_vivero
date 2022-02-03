@@ -178,6 +178,8 @@ const productsController = {
      })
     .then (function(){
         res.redirect("/products")
+    }).catch(error => {
+      console.log(error)
     })
   
 },
