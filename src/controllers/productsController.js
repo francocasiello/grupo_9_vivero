@@ -143,6 +143,7 @@ const productsController = {
     },
 
     store: (req, res) => {
+      console.log("store");
       const resultValidation = validationResult(req);
       //return res.send(resultValidation.errors.length);
       if (resultValidation.errors.length > 0) {
@@ -169,19 +170,15 @@ const productsController = {
       //};
       // Modificar el arreglo para agregar el nuevo producto
       //const newProductList = [...products, newProduct];
-      db.Producto.create ({
+    let productoNuevo = {
         name: req.body.name,
         image: req.file ? req.file.filename : null,
         price: req.body.price,
         description: req.body.description,
         categoria_id: req.body.categoria_id
-     })
-    .then (function(){
-        res.redirect("/products")
-    }).catch(error => {
-      console.log(error)
-    })
-  
+    }
+    db.Producto.create(productoNuevo);    
+    return res.redirect("/products");  
 },
   
       // Escribir en el JSON el nuevo arreglo actualizado
