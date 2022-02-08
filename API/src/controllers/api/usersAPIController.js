@@ -13,17 +13,19 @@ const usersAPIController = {
      'list': (req, res) => {
         db.Usuario.findAll()
         .then(usuarios => {
+            let usersArray = [];
+            usuarios.forEach(usuario => {
+                usersArray.push({
+                name: usuario.fullName,
+                email: usuario.email,
+                detail: '/api/users/'+usuario.id,
+                })
+            });
             let respuesta = {
                 count: {
                     total: usuarios.length,
                },
-                users: {
-                    usuarios,
-                    id: miNombre,
-                    name: usuarios.fullName,
-                    email: usuarios.email,
-                    detail: '/api/users/usuarios.id',
-                },
+                users: usersArray,
             }
                 res.json(respuesta);
             })
