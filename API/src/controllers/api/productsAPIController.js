@@ -12,7 +12,9 @@ const categories = db.Category;
 const productsAPIController = {
     'list': (req, res) => {
         categories.findAll();
-        db.Producto.findAll()
+        db.Producto.findAll({
+            include: [{association: "category"}]}
+            )
         
         .then(products => {
             let categoriesArray = {}
@@ -26,7 +28,7 @@ const productsAPIController = {
                     id:product.id,
                     name:product.name,
                     description:product.description,
-                    categories:[],
+                    categories:product.category.name,
                     detail:'/api/products/'+product.id
                 })
         })
