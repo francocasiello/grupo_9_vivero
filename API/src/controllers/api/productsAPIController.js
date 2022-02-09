@@ -11,24 +11,41 @@ const categories = db.Category;
 
 const productsAPIController = {
     'list': (req, res) => {
-        categories.findAll();
+        let categoriesArray = []
+        categories.findAll()
+        .then( categories => {
+            categories.forEach(category => {
+                //console.log(category.dataValues)
+                categoriesArray.push({
+                    id:category.dataValues.id,
+                    name:category.dataValues.name,
+                    cant:0
+                });
+            })
+            
+        })
         db.Producto.findAll({
             include: [{association: "category"}]}
             )
         
         .then(products => {
-            let categoriesArray = {}
+            
             let productsArray = []
             products.forEach(product => {
-                //if(categoriesArray[product.categoria_id]){
-
-                //}
-                // = categoriesArray[product.categoria_id] + 1;
-                productsArray.push({
+                let category = null;
+                try {
+                    //console.log(product.category.dataValues)
+                    category = categoriesArray.find(category => category.id == product.category.id)
+                    category.cant = category.cant + 1
+                    //console.log(category)
+                } catch (e) {
+                    console.log("producto con valor en null");
+                }
+                 productsArray.push({
                     id:product.id,
                     name:product.name,
                     description:product.description,
-                    categories:product.category.name,
+                    //categories:product.category.name,
                     detail:'/api/products/'+product.id
                 })
         })
@@ -36,7 +53,7 @@ const productsAPIController = {
                 meta: {
                 status: 200,
                 count: products.length,
-                countByCategory: categories,
+                countByCategory: categoriesArray,
                 },
                 detalles: 
                     productsArray
