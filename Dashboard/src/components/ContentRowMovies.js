@@ -1,9 +1,12 @@
 import React from 'react';
 import SmallCard from './SmallCard';
 
+
+
+
 let productInDataBase = {
     color:   "primary",
-    titulo: "Movies in Data Base",
+    titulo: "Productos en la Base de Datos",
     valor: 21,
     icono: "fas fa-film",
 }

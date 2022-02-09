@@ -3,10 +3,10 @@ import React from 'react';
 function Footer(){
     return (
         <React.Fragment>
-			<footer className="sticky-footer bg-white">
+			<footer className="sticky-footer bg-black">
 				<div className="container my-auto">
 					<div className="copyright text-center my-auto">
-						<span>Copyright &copy; Dashboard 2021</span>
+						<span>Copyright &copy; Dashboard 2022 del Vivero </span>
 					</div>
 				</div>
 			</footer>

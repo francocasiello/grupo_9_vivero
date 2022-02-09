@@ -12,9 +12,9 @@ function ContentRowTop(){
 
 	const parrafo = useRef();
 
-	const cambiarColor = () => {
-		parrafo.current.classList.toggle("bg-warning")
-	}
+	//const cambiarColor = () => {
+	//	parrafo.current.classList.toggle("bg-warning")
+	//}
 
     return(
         <React.Fragment>
@@ -36,7 +36,7 @@ function ContentRowTop(){
 							<div className="card shadow mb-4">
 								<div className="card-header py-3">
 									{/*<h5 onMouseOver={ () => cambiarColor("cursada que ya culmina")}*/}
-									<h5 onMouseOver={ cambiarColor} className="m-0 font-weight-bold text-gray-800">Last movie in Data Base</h5>
+									<h5 /* onMouseOver={ cambiarColor} */ className="m-0 font-weight-bold text-gray-800">Last movie in Data Base</h5>
 								</div>
 								<div className="card-body">
 									<div className="text-center">
