@@ -25,6 +25,7 @@ class ContentRowTop extends Component{
                 users: users.count.total
             })
         })
+
         fetch('/api/products/')
         .then(response => {
             return response.json()
@@ -35,6 +36,7 @@ class ContentRowTop extends Component{
                 products: products.meta.count
             })
         })
+
         fetch('/api/products/')
         .then(response => {
             return response.json()

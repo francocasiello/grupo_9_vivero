@@ -65,23 +65,24 @@ const productsAPIController = {
         db.Producto.findByPk(req.params.id,{
             include: [{association: "category"}]}
           )
-            .then(product => {
-                let respuesta = {
-                    meta: {
-                        status: 200,
-                        url: '/api/products/'+product.id
-                    },
-                    data: {
-                        id:product.id,
-                        name:product.name,
-                        description:product.description,
-                        categories: product.category.name,
-                        price: product.price,
-                        imagen: product.image
-                    }
+        .then(product => {
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    url: '/api/products/id'
+                },
+                data: {
+                    //id:product.id,
+                    //name:product.name,
+                    //description:product.description,
+                    //categories: product.category.name,
+                    //price: product.price,
+                    //imagen: product.image
+                    product //porque se tiene que detallar cada uno ?
                 }
-                res.json(respuesta);
-            });
+            }
+            res.json(respuesta);
+        });
     },
     
     

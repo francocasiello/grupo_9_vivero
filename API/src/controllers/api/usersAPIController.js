@@ -18,7 +18,7 @@ const usersAPIController = {
                 usersArray.push({
                 name: usuario.fullName,
                 email: usuario.email,
-                detail: '/api/users/'+usuario.id,
+                detail: '/api/users/id'
                 })
             });
             let respuesta = {

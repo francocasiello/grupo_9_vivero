@@ -1,5 +1,9 @@
 import React, {useRef, Component} from 'react';
-import imagenFondo from '../assets/images/mandalorian.jpg';
+
+{/*<!-- import imageProduct from '../assets/images/`${this.state.products.image} -->*/}
+{/*<!-- No se como hacer para que esa imagen sea variable -->*/}
+import imageProduct from '../assets/images/ficus.jpg';
+
 import ContentRowMovies from './ContentRowMovies';
 
 class ContentRowTop extends Component{
@@ -63,7 +67,7 @@ class ContentRowTop extends Component{
 								</div>
 								<div className="card-body  bg-dark">
 									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src= {imageProduct} alt=" Star Wars - Mandalorian "/>
 									</div>
 									<p className="text-white" >{this.state.products.description}</p>
 									<a className="btn btn-success" target="_blank" rel="nofollow" href="/">Ver Detalles</a>
@@ -78,7 +82,7 @@ class ContentRowTop extends Component{
 								</div>
 								<div className="card-body  bg-dark">
 									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={this.state.products.image} alt=" Star Wars - Mandalorian "/>
 									</div>
 									<p className="text-white" >{this.state.user.email}</p>
 									<a className="btn btn-success" target="_blank" rel="nofollow" href="/">Ver Detalles</a>
