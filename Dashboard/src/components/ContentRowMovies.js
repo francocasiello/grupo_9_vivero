@@ -13,14 +13,14 @@ let productInDataBase = {
 
 let amount ={
     color:   "success",
-    titulo: "Total awards",
+    titulo: "Usuarios en la Base de Datos",
     valor: 79,
     icono: "fas fa-award",
 }
 
 let user = {
     color:   "warning",
-    titulo: "Actors quantity",
+    titulo: "Categorias en la Base de Datos",
     valor: 49,
     icono: "fas fa-user",
 }
