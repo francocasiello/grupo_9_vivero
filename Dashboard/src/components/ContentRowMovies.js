@@ -50,24 +50,24 @@ class ContentRowTop extends Component{
 
     render(){
         let productInDataBase = {
-            color:   "primary",
+            color:   "success",
             titulo: "Productos en la Base de Datos",
             valor: this.state.products,
-            icono: "fas fa-film",
+            icono: "fa-solid fa-seedling",
         }
         
         let amount ={
             color:   "success",
             titulo: "Usuarios en la Base de Datos",
             valor: this.state.users,
-            icono: "fas fa-award",
+            icono: "fa-solid fa-user",
         }
         
         let user = {
-            color:   "warning",
+            color:   "success",
             titulo: "Categorias en la Base de Datos",
             valor: this.state.categories,
-            icono: "fas fa-user",
+            icono: "fa-solid fa-table",
         }
         
         let cardProps = [productInDataBase,amount,user];

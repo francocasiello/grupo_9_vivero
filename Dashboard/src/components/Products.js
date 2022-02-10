@@ -27,19 +27,18 @@ class Products extends Component{
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h3 mb-2 text-gray-800">Todos los productos en la Base de Datos</h1>
+					<h1 className="h3 mb-2 text-white">. Todos los productos en la Base de Datos  .</h1>
 					
 					{/*<!-- DataTales Example -->*/}
-					<div className="card shadow mb-4">
+					<div className="card shadow mb-4 bg-gradient-dark">
 						<div className="card-body">
 							<div className="table-responsive">
-								<table className="table table-bordered table-striped table-hover" id="dataTable" width="100%" cellspacing="0">
-									<thead className = "table-primary">
+								<table className="table table-striped table-dark table-hover text-white" id="dataTable" width="100%" cellspacing="0">
+									<thead className = "table-dark">
 										<tr>
                                             <th>Id</th>
                                             <th>Nombre</th>
                                             <th>Descripción</th>
-                                            <th>Categoria</th>
                                             <th>Detalles</th>
 										</tr>
 									</thead>
@@ -48,7 +47,6 @@ class Products extends Component{
                                             <th>Id</th>
                                             <th>Nombre</th>
                                             <th>Descripción</th>
-                                            <th>Categoria</th>
                                             <th>Detalles</th>
 										</tr>
 									</tfoot>

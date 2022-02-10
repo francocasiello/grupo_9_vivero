@@ -1,21 +1,44 @@
-import React, {useRef} from 'react';
+import React, {useRef, Component} from 'react';
 import imagenFondo from '../assets/images/mandalorian.jpg';
-import GenresInDb from './GenresInDb';
 import ContentRowMovies from './ContentRowMovies';
-function ContentRowTop(){
-	
-	// const cambiarColor = (mensaje) => { alert("mensaje") } 
 
-	//function cambiarColor () {
-	//	alert ("hola")
-	//}
+class ContentRowTop extends Component{
+    constructor(){
+        super();
+        this.state = {
+            products : [], //estado inicial
+			user: []
+        }
 
-	const parrafo = useRef();
+    }
 
-	//const cambiarColor = () => {
-	//	parrafo.current.classList.toggle("bg-warning")
-	//}
+    componentDidMount(){
+        fetch('/api/products/')
+        .then(response => {
+            return response.json()
+        })
+        .then(products =>{
 
+            this.setState({
+				
+                products: products.detalles.pop()
+            })
+        }) 
+		fetch('/api/users/')
+        .then(response => {
+            return response.json()
+        })
+        .then(users =>{
+
+            this.setState({
+                user: users.users.pop()
+            })
+        })
+    }
+
+
+
+	render(){
     return(
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
@@ -33,27 +56,40 @@ function ContentRowTop(){
 					<div className="row">
 						{/*<!-- Last Movie in DB -->*/}
 						<div className="col-lg-6 mb-4">
-							<div className="card shadow mb-4">
-								<div className="card-header py-3">
+							<div className="card shadow mb-4 ">
+								<div className="card-header py-3  bg-gradient-success">
 									{/*<h5 onMouseOver={ () => cambiarColor("cursada que ya culmina")}*/}
-									<h5 /* onMouseOver={ cambiarColor} */ className="m-0 font-weight-bold text-gray-800">Last movie in Data Base</h5>
+									<h5 /* onMouseOver={ cambiarColor} */ className="m-0 font-weight-bold text-white">El último producto en la base de datos es: {this.state.products.name}</h5>
 								</div>
-								<div className="card-body">
+								<div className="card-body  bg-dark">
 									<div className="text-center">
 										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
 									</div>
-									<p ref={parrafo}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
-									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+									<p className="text-white" >{this.state.products.description}</p>
+									<a className="btn btn-success" target="_blank" rel="nofollow" href="/">Ver Detalles</a>
+								</div>
+							</div>
+						</div>
+						<div className="col-lg-6 mb-4">
+							<div className="card shadow mb-4 ">
+								<div className="card-header py-3  bg-gradient-success">
+									{/*<h5 onMouseOver={ () => cambiarColor("cursada que ya culmina")}*/}
+									<h5 /* onMouseOver={ cambiarColor} */ className="m-0 font-weight-bold text-white">El último usuario en la base de datos es: {this.state.user.name}</h5>
+								</div>
+								<div className="card-body  bg-dark">
+									<div className="text-center">
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
+									</div>
+									<p className="text-white" >{this.state.user.email}</p>
+									<a className="btn btn-success" target="_blank" rel="nofollow" href="/">Ver Detalles</a>
 								</div>
 							</div>
 						</div>
 						{/*<!-- End content row last movie in Data Base -->*/}
 
-						{/*<!-- Genres in DB -->*/}
-						<GenresInDb />
-
-						{/*<!--End Genres In Db-->*/}		
+						
 					</div>
+					
 				</div>
 				{/*<!--End Content Row Top-->*/}
 
@@ -61,4 +97,6 @@ function ContentRowTop(){
     )
 
 }
+}
+
 export default ContentRowTop;
