@@ -19,9 +19,9 @@ module.exports = (sequelize, dataTypes) => {
         image: {
             type: dataTypes.CHAR
         },
-       // categoria_id: {
-        //    type: dataTypes.INTEGER
-       // }
+        categoria_id: {
+            type: dataTypes.INTEGER
+        }
     };
     let config = {
         tableName: 'productos',

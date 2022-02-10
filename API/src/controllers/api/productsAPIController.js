@@ -27,9 +27,7 @@ const productsAPIController = {
         db.Producto.findAll({
             include: [{association: "category"}]}
             )
-        
         .then(products => {
-            
             let productsArray = []
             products.forEach(product => {
                 let category = null;
@@ -48,7 +46,7 @@ const productsAPIController = {
                     //categories:product.category.name,
                     detail:'/api/products/'+product.id
                 })
-        })
+            })
             let respuesta = {
                 meta: {
                 status: 200,
@@ -59,8 +57,8 @@ const productsAPIController = {
                     productsArray
                 
             }
-                res.json(respuesta);
-            })
+            res.json(respuesta);
+        })
     },
     
     'detail': (req, res) => {
