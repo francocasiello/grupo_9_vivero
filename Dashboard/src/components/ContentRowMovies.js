@@ -1,35 +1,78 @@
-import React from 'react';
+import React, {Component} from 'react';
 import SmallCard from './SmallCard';
 
+class ContentRowTop extends Component{
+    
+       constructor(){
+        super();
+        this.state = {
+            products : [], //estado inicial
+            users: [],
+            categories: []
+        }
 
+    }
 
+   
+    componentDidMount(){
+        fetch('/api/users/')
+        .then(response => {
+            return response.json()
+        })
+        .then(users =>{
 
-let productInDataBase = {
-    color:   "primary",
-    titulo: "Productos en la Base de Datos",
-    valor: 21,
-    icono: "fas fa-film",
-}
+            this.setState({
+                users: users.count.total
+            })
+        })
+        fetch('/api/products/')
+        .then(response => {
+            return response.json()
+        })
+        .then(products =>{
 
-let amount ={
-    color:   "success",
-    titulo: "Usuarios en la Base de Datos",
-    valor: 79,
-    icono: "fas fa-award",
-}
+            this.setState({
+                products: products.meta.count
+            })
+        })
+        fetch('/api/products/')
+        .then(response => {
+            return response.json()
+        })
+        .then(categories =>{
 
-let user = {
-    color:   "warning",
-    titulo: "Categorias en la Base de Datos",
-    valor: 49,
-    icono: "fas fa-user",
-}
+            this.setState({
+                categories: categories.meta.countByCategory.length
+            })
+        })
+    }
+    
 
-let cardProps = [productInDataBase,amount,user];
+    render(){
+        let productInDataBase = {
+            color:   "primary",
+            titulo: "Productos en la Base de Datos",
+            valor: this.state.products,
+            icono: "fas fa-film",
+        }
+        
+        let amount ={
+            color:   "success",
+            titulo: "Usuarios en la Base de Datos",
+            valor: this.state.users,
+            icono: "fas fa-award",
+        }
+        
+        let user = {
+            color:   "warning",
+            titulo: "Categorias en la Base de Datos",
+            valor: this.state.categories,
+            icono: "fas fa-user",
+        }
+        
+        let cardProps = [productInDataBase,amount,user];
 
-
-function ContentRowTop(){
-    return (
+        return(
         <React.Fragment>
         {/*<!-- Content Row -->*/}
         <div className="row">
@@ -42,4 +85,7 @@ function ContentRowTop(){
         </React.Fragment>
     )
 }
+}
+
+
 export default ContentRowTop;
