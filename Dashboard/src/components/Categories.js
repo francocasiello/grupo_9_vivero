@@ -35,7 +35,7 @@ class Categories extends Component{
 						<div className="card-body">
 							<div className="table-responsive">
 								<table className="table table-striped table-dark table-hover text-white" id="dataTable" width="100%" cellspacing="0">
-									<thead className = "table-dark">
+									<thead className = "h6 table-dark text-uppercase mb-1">
 										<tr>
                                             <th>Id</th>
                                             <th>Nombre</th>
