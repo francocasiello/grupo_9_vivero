@@ -42,9 +42,11 @@ const productsAPIController = {
                  productsArray.push({
                     id:product.id,
                     name:product.name,
+                    price:product.price,
                     description:product.description,
+                    image:product.image,
                     //categories:product.category.name,
-                    detail:'/api/products/'+product.id
+                    detail:'/api/products/id'
                 })
             })
             let respuesta = {
