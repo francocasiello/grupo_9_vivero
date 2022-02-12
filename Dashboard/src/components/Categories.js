@@ -28,7 +28,7 @@ class Categories extends Component{
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h3 mb-2 text-white text-center font-weight-bold"> Cantidad de productos por categoria:</h1>
+					<h1 className="h5 mb-2 text-white text-center font-weight-bold text-uppercase mb-1"> Cantidad de productos por categoria:</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4 bg-gradient-dark">

@@ -14,8 +14,8 @@ function ContentWrapper(){
                 <div id="content" class= "bg-dark">
                     <TopBar />
                     <ContentRowTop />
-                    <Products />
                     <Categories />
+                    <Products />                
                     <Footer />
                 </div>
             </div>    

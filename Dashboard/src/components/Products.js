@@ -28,7 +28,7 @@ class Products extends Component{
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h3 mb-2 text-white text-center font-weight-bold">  Todos los productos de la Base de Datos:</h1>
+					<h1 className="h5 mb-2 text-white text-center font-weight-bold text-uppercase mb-1">  Todos los productos de la Base de Datos:</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4 bg-gradient-dark">
