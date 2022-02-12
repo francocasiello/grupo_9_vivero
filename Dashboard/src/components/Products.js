@@ -6,6 +6,7 @@ class Products extends Component{
         super();
         this.state = {
             products : [] //estado inicial
+			
         }
 
     }
@@ -27,7 +28,7 @@ class Products extends Component{
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h3 mb-2 text-white">. Todos los productos en la Base de Datos  .</h1>
+					<h1 className="h3 mb-2 text-white text-center font-weight-bold">  Todos los productos de la Base de Datos:</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4 bg-gradient-dark">
@@ -39,7 +40,8 @@ class Products extends Component{
                                             <th>Id</th>
                                             <th>Nombre</th>
                                             <th>Descripción</th>
-                                            <th>Detalles</th>
+                                            <th>Precio</th>
+											<th>Categoria</th>
 										</tr>
 									</thead>
 									<tfoot>
