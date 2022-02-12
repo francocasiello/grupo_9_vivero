@@ -49,7 +49,7 @@ class ContentRowTop extends Component{
 				{/*<!-- Content Row Top -->*/}
 				<div className="container-fluid">
 					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+						<h1 className="h3 mb-0 text-white">App Dashboard</h1>
 					</div>
 				
 					{/*<!-- Content Row Movies-->*/}
@@ -70,7 +70,7 @@ class ContentRowTop extends Component{
 								</div>
 								<div className="card-body  bg-dark">
 									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src= {this.state.products.image} alt=" Star Wars - Mandalorian "/>
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src= {this.state.products.image} alt={this.state.products.name}/>
 									</div>
 									<p className="text-white " >{this.state.products.description}</p>
 									<p className="text-white " >{this.state.products.price}</p>
@@ -88,7 +88,7 @@ class ContentRowTop extends Component{
 								</div>
 								<div className="card-body  bg-dark">
 									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4 .img-responsive" style={{width: 40 +'rem'}} src={this.state.user.avatar} alt=" Star Wars - Mandalorian "/>
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4 .img-responsive" style={{width: 40 +'rem'}} src={this.state.user.avatar} alt= {this.state.user.name}/>
 									</div>
 									<p className="text-white" >{this.state.user.name}</p>
 									<p className="text-white" >{this.state.user.email}</p>
