@@ -64,15 +64,17 @@ class ContentRowTop extends Component{
 							<div className="card shadow mb-4 ">
 								<div className="card-header py-3  bg-gradient-success">
 									{/*<h5 onMouseOver={ () => cambiarColor("cursada que ya culmina")}*/}
-									<h5 /* onMouseOver={ cambiarColor} */ className="h6 m-0 font-weight-bold text-white text-uppercase mb-1">El último producto en la base de datos es:</h5>
+									<h5 /* onMouseOver={ cambiarColor} */ className="h6 m-0 font-weight-bold text-white text-uppercase mb-1">Último producto en la base de datos</h5>
 									<br/>
-									<h4 /* onMouseOver={ cambiarColor} */ className="h5 m-0 font-weight-bold text-white">{this.state.products.name}</h4>
+									<h4 /* onMouseOver={ cambiarColor} */ className="h5 m-0 font-weight-bold text-white">Nombre Producto: {this.state.products.name}</h4>
 								</div>
 								<div className="card-body  bg-dark">
 									<div className="text-center">
 										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src= {this.state.products.image} alt={this.state.products.name}/>
 									</div>
+									<p className="h5 font-weight-bold text-white " >Descripción:</p>
 									<p className="text-white " >{this.state.products.description}</p>
+									<p className="h5 font-weight-bold text-white " >Precio:</p>
 									<p className="text-white " >$ {this.state.products.price}</p>
 									<a className="btn btn-success btn-center" target="_blank" rel="nofollow" href="/">Agregar Carrito</a>
 								</div>
@@ -82,15 +84,17 @@ class ContentRowTop extends Component{
 							<div className="card shadow mb-4 ">
 								<div className="card-header py-3  bg-gradient-success">
 									{/*<h5 onMouseOver={ () => cambiarColor("cursada que ya culmina")}*/}
-									<h5 /* onMouseOver={ cambiarColor} */ className="h6 m-0 font-weight-bold text-white text-uppercase mb-1">El último usuario en la base de datos es:</h5>
+									<h5 /* onMouseOver={ cambiarColor} */ className="h6 m-0 font-weight-bold text-white text-uppercase mb-1">Último usuario en la base de datos</h5>
 									<br/>
-									<h4 /* onMouseOver={ cambiarColor} */ className="h5 m-0 font-weight-bold text-white">{this.state.user.name}</h4>
+									<h4 /* onMouseOver={ cambiarColor} */ className="h5 m-0 font-weight-bold text-white">Nombre Usuario: {this.state.user.name}</h4>
 								</div>
 								<div className="card-body  bg-dark">
 									<div className="text-center">
 										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4 .img-responsive" style={{width: 40 +'rem'}} src={this.state.user.avatar} alt= {this.state.user.name}/>
 									</div>
+									<p className="h5 font-weight-bold text-white " >Nombre Completo:</p>
 									<p className="text-white" >{this.state.user.name}</p>
+									<p className="h5 font-weight-bold text-white " >E-mail:</p>
 									<p className="text-white" >{this.state.user.email}</p>
 									<a className="btn btn-success" target="_blank" rel="nofollow" href="/">Log In</a>
 								</div>

@@ -24,6 +24,7 @@ const productsAPIController = {
             })
             
         })
+
         db.Producto.findAll({
             include: [{association: "category"}]}
             )
@@ -45,7 +46,7 @@ const productsAPIController = {
                     price:product.price,
                     description:product.description,
                     image:product.image,
-                    //categories:product.category.name,
+                    categories:product.category.name,
                     detail:'/api/products/id'
                 })
             })
@@ -77,7 +78,7 @@ const productsAPIController = {
                     //id:product.id,
                     //name:product.name,
                     //description:product.description,
-                    //categories: product.category.name,
+                    categories: product.category.name,
                     //price: product.price,
                     //imagen: product.image
                     product //porque se tiene que detallar cada uno ?
