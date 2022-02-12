@@ -25,7 +25,8 @@ class ContentRowTop extends Component{
 
             this.setState({
                 products: products.detalles.pop(),
-				lastProduct: products.detalles.at(-1)
+				lastProduct: products.detalles.at(-1) /*<!-- trae el ultimo producto-->*/
+				
             })
         }) 
 		fetch('/api/users/')
