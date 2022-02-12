@@ -36,7 +36,7 @@ class Categories extends Component{
 							<div className="table-responsive">
 								<table className="table table-striped table-dark table-hover text-white" id="dataTable" width="100%" cellspacing="0">
 									<thead className = "h6 table-dark text-uppercase mb-1">
-										<tr>
+										<tr className = "bg-gradient-success table-hover" >
                                             <th>Id</th>
                                             <th>Nombre</th>
                                             <th>Total de Productos</th>
@@ -44,7 +44,7 @@ class Categories extends Component{
 										</tr>
 									</thead>
 									
-									<tbody>
+									<tbody >
 									{
                                     this.state.products.map((product, index)=>{
                                         return  <CategoriesList  {...product}  key={product + index} />

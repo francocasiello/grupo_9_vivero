@@ -28,16 +28,16 @@ class Products extends Component{
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h5 mb-2 text-white text-center font-weight-bold text-uppercase mb-1">  Todos los productos de la Base de Datos:</h1>
+					<h1 className="h5 mb-2 text-white text-center font-weight-bold text-uppercase mb-1">Listado de productos de la Base de Datos:</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4 bg-gradient-dark">
 						<div className="card-body">
 							<div className="table-responsive">
 								<table className="table table-striped table-dark table-hover text-white" id="dataTable" width="100%" cellspacing="0">
-									<thead className = "table-dark text-uppercase mb-1">
-										<tr>
-                                            <th>Id</th>
+									<thead className = "table-dark text-uppercase mb-1 ">
+										<tr className = "bg-gradient-success">
+                                            <th >Id</th>
                                             <th>Nombre</th>
                                             <th>Descripción</th>
                                             <th>Precio</th>
@@ -52,7 +52,7 @@ class Products extends Component{
                                             <th>Detalles</th>
 										</tr>
 									</tfoot>
-									<tbody>
+									<tbody >
 									{
                                     this.state.products.map((product, index)=>{
                                         return  <ProductsList  {...product}  key={product + index} />
