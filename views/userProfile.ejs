@@ -21,7 +21,7 @@
     </div>
     <div>
         <h2 class = "profileName">
-            Bienvenido <br>
+            Bienvenido/a <br>
             <%= user.fullName %>
         </h2>
           <h2 class = "profileEmail"> 
@@ -30,21 +30,21 @@
         </h2<% include  %> >
         <br>
         <div>
-        <h3 class= "marginBotones">
+        <h6 class= "marginBotones">
         <a class="botonLogout" href = "/user/logout">LOGOUT</a>
-        </h3>
+        </h6>
       </div> 
         <div>
-        <h3 class= "marginBotones">
+        <h6 class= "marginBotones">
           <a class="botonLogout" href = "/user/destroy">ELIMINAR USUARIO</a>
-          </h3>    
+          </h6>    
         </div>
 
           <div>
           <% if (locals.isLogged) {%>
-            <h3 class= "marginBotones">
+            <h6 class= "marginBotones">
             <a href="/user/edit/<%= user.id %>" class="botonLogout">EDITAR USUARIO</a>
-          </h3> 
+          </h6> 
                 <% } else {%>
              
                 <% } %>

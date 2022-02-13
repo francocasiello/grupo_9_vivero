@@ -79,7 +79,7 @@ header {
 
 .titulo {
         display: flex;
-        font-size: 200%;
+        font-size: 100%;
         font-weight: normal;
     }
     
@@ -100,7 +100,7 @@ header {
 }
 
 h2 .profileName {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .barra-busqueda {
@@ -301,6 +301,28 @@ main {
     height: 350px;
 }
 
+
+.text-bienvenidos {
+
+    font-size: 35px;
+    padding: 1rem;
+    
+}
+
+.text-home {
+    
+    padding: 0rem;
+    margin-top: 100px;
+    font-size: 30px;
+    text-decoration:none;
+    font-style: normal;
+    font-weight: lighter;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
 .login {
     background: rgba(43, 179, 122, 0.95);
     padding: 3rem;
@@ -316,7 +338,7 @@ h2 {
     }
 
 h3 {
-        font-size: 14px;
+        font-size: 20px;
         text-decoration:none;
         font-style: normal;
         font-weight: lighter;
@@ -621,11 +643,11 @@ form {
 }
 
 h2.profileName {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 h2.profileEmail {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .profileDates {
@@ -731,7 +753,7 @@ margin-bottom: 15px
 }
 
 .datosproducto h2 {
-    font-size: 60px;
+    font-size: 30px;
 }
 
 
@@ -741,7 +763,7 @@ margin-bottom: 15px
 }
 
 .datosproducto h5 {
-    font-size: 25px;
+    font-size: 10px;
     margin-bottom: 5px;
     margin-top: 0px;
 }
@@ -788,6 +810,14 @@ margin-bottom: 15px
 
 .cantidad1 a:hover {
     color: white;
+}
+
+.datosproducto h3 {
+    font-size: 30px;
+    text-decoration:none;
+    font-style: normal;
+    font-weight: lighter;
+    padding-left: 0%;
 }
 
 /**** CARRITO ****/
@@ -961,11 +991,11 @@ justify-content: space-between;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 30px;
     }   
 
 h3 {
-    max-width: 600px;
+    max-width: 10px;
 }
 
    
@@ -1060,7 +1090,8 @@ h3 {
 }
 
 .datosproducto h2 {
-    font-size: 60px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 
@@ -1070,16 +1101,17 @@ h3 {
 }
 
 .datosproducto h5 {
-    font-size: 25px;
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .datosproducto h4 {
-    font-size: 25px;
+    font-size: 15px;
+    margin-bottom: 10px;
    }
 
 .login h2 i {
-       font-size: 70px;
+       font-size: 30px;
    }
 
 .productocarrito2 {
@@ -1146,7 +1178,7 @@ main {
 }
 
 h2 {
-    font-size: 80px;
+    font-size: 30px;
 }   
 
 h3 {
@@ -1218,11 +1250,11 @@ h3 {
    }
 
 h2.profileName {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 h2.profileEmail {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .profileDates {
@@ -1232,11 +1264,12 @@ h2.profileEmail {
 .botonLogout {
     color: white;
     border-radius: 0px;
-    font-size: 18px;
-    border: none;
+    font-size: 15px;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 5px 20px ;
+    border-radius: 20px;
     transition: all 1000ms;
+    box-sizing: content-box;
 
 }
 
@@ -1244,9 +1277,33 @@ h2.profileEmail {
     background-color: #470808;
     color: white;
     border-radius: 0px;
-    font-size: 18.5px;
+    font-size: 15px;
+    border-radius: 5px;
     box-shadow: 5px 4px 4px rgba(243, 243, 243, 0.486);
  }
+
+ .botonComprar {
+    color: white;
+    border-radius: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 5px ;
+    border-radius: 20px;
+    transition: all 1000ms;
+    
+    box-sizing: content-box;
+
+}
+.botonComprar:hover {
+    background-color: #470808;
+    color: white;
+    border-radius: 0px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 4px 4px rgba(243, 243, 243, 0.486);
+ }
+
+
     
 }
 

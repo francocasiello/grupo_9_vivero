@@ -17,7 +17,7 @@
                         <%= product.name %>
                     </h2>
                     <h3>
-                        <%= product.category.name %>
+                        Categoria: <%= product.category.name %>
                     </h3>
                     <h3>
                        $ <%= product.price %>
@@ -50,11 +50,11 @@
                            </form>
                        </div>
                        <div  class = cantidad1>
-                       <h6>
-                       AGREGAR AL CARRITO
+                       <h6 class="botonComprar">
+                        <a href="/productCart" class="action-button edit">AGREGAR AL CARRITO</a>
                        </h6> 
                        <% if (locals.isLogged) {%>
-                        <h6 class = "linkedita">
+                        <h6 class = "botonComprar">
                         <a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
                       </h6>
                             <% } else {%>
