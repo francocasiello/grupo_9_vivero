@@ -47,7 +47,7 @@ const productsAPIController = {
                     description:product.description,
                     image:product.image,
                     categories:product.category.name,
-                    detail:'/api/products/id'
+                    detail:'/api/products/' + product.id
                 })
             })
             let respuesta = {
@@ -72,7 +72,7 @@ const productsAPIController = {
             let respuesta = {
                 meta: {
                     status: 200,
-                    url: '/api/products/id'
+                    url: '/api/products/' + product.id
                 },
                 data: {
                     //id:product.id,

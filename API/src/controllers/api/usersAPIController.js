@@ -19,7 +19,7 @@ const usersAPIController = {
                 name: usuario.fullName,
                 email: usuario.email,
                 avatar:usuario.avatar,
-                detail: '/api/users/id'
+                detail: '/api/users/' + usuario.id
                 })
             });
             let respuesta = {
